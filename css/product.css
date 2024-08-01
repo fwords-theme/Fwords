@@ -1,0 +1,594 @@
+body {
+    margin: 0;
+    background-color: #D3AFE9;
+    font-family: Abril Fatface;
+}
+
+.topnav {
+    background-color: #451E5D;
+    width: 100%;
+    height: 55px;
+    top: 0px;
+    position: fixed;
+    text-align: center;
+    z-index: 10;
+
+    .logo {
+        user-select: none;
+        height: 35px;
+        padding-top: 10px;
+    }
+
+    .shop_topnav {
+        display: none;
+    }
+}
+
+.product_info {
+    position: relative;
+    text-align: center;
+    background-color: #451E5D;
+    border-radius: 0 0 5vw 5vw;
+    margin-top: 55px;
+
+    .product_container {
+        width: 100%;
+        height: 80vw;
+
+        img {
+            position: relative;
+            width: 50%;
+            margin: auto;
+            margin-top: 10vw;
+            user-select: none;
+        }
+    }
+
+    .product_img_selector {
+        position: relative;
+        display: inline-flex;
+        
+        .item {
+            width: 15vw;
+            height: 15vw;
+            border: 1px solid white;
+            border-radius: 3vw;
+            margin: 2vw;
+            transition: 0.2s;
+
+            img {
+                width: 60%;
+                margin-top: 1.5vw;
+                user-select: none;
+            }
+
+            #showcase {
+                width: 80%;
+            }
+        }
+
+        .item:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+
+    .product_name {
+        font-family: Abril Fatface;
+        font-size: 10px;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        color: white;
+    }
+
+    .product_counter {
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 30vw;
+        display: inline-flex;
+        color: white;
+
+        input {
+            font-family: Rasa;
+            font-weight: bolder;
+            font-size: 20px;
+            text-align: center;
+            background-color: #451E5D;
+            color: white;
+            border: none;
+            user-select: none;
+            width: 50px;
+        }
+
+        span {
+            user-select: none;
+            font-family: Rasa;
+            font-weight: bolder;
+            font-size: 25px;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        .down {
+            margin-left: 3vw;
+        }
+
+        .up {
+            margin-right: 3vw;
+        }
+    }
+
+    .cartbtn {
+        margin-top: 5vw;
+        font-family: Abril Fatface;
+        background-color: white;
+        color: #451E5D;
+        border: none;
+        border-radius: 3vw;
+        font-size: 6vw;
+        padding: 3vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        transition: 0.2s;
+    }
+
+    .cartbtn:hover {
+        background-color: #451E5D;
+        color: white;
+        border: 2px solid white;
+        cursor: pointer;
+    }
+
+    .product_description {
+        font-family: Rasa;
+        font-size: 18px;
+        text-align: left;
+        padding: 10vw;
+        color: white;
+
+        .more_description {
+            display: none;
+        }
+    }
+
+    .read_more {
+        background-color: #451E5D;
+        border: none;
+        text-decoration: underline;
+        text-align: center;
+        font-size: 7vw;
+        font-family: Abril Fatface;
+        color: white;
+        margin-bottom: 5vw;
+    }
+
+    .read_more:hover {
+        cursor: pointer;
+    }
+}
+
+.bundle_text {
+    position: relative;
+    margin-top: 7vw;
+    text-align: center;
+    font-size: 7.5vw;
+    color: #451E5D;
+}
+
+.bundle_wrapper {
+    position: relative;
+    margin-top: 5vw;
+
+    .bundle_card {
+        position: relative;
+        text-align: center;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 5vw;
+        height: 95vw;
+        margin-left: 7vw;
+        margin-right: 7vw;
+
+        span {
+            position: absolute;
+            user-select: none;
+            z-index: 2;
+            color: #451E5D;
+        }
+    
+        .bundle_old_price {
+            background-color: #9BCBEB;
+            top: 3vw;
+            left: 2vw;
+            padding: 2vw;
+            border-radius: 5vw;
+        }
+    
+        .bundle_savings {
+            background-color: #9BCBEB;
+            top: 5vw;
+            right: 7vw;
+            padding: 3vw;
+            border-radius: 50%;
+        }
+    
+        img {
+            width: 85%;
+            margin-top: 20vw;
+            transition: 0.2s;
+            user-select: none;
+        }
+    
+        img:hover {
+            transform: scale(1.03);
+        }
+    
+        p {
+            padding-left: 1vw;
+            color: #451E5D;
+            font-size: 4vw;
+        }
+    
+        button {
+            user-select: none;
+            background-color: #451E5D;
+            color: white;
+            font-family: Abril Fatface;
+            font-size: 4vw;
+            width: 50%;
+            padding: 1.5vw;
+            border-radius: 3vw;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            border: 2px solid #451E5D;
+            background-color: white;
+            color: #451E5D;
+        }
+    }
+}
+
+.gift_text {
+    position: relative;
+    text-align: center;
+    margin-top: 5vw;
+    font-size: 7.5vw;
+    color: #451E5D;
+}
+
+.gift_card_wrapper {
+    position: relative;
+    text-align: center;
+    background-color: #451E5D;
+    margin-top: 5vw;
+    border-radius: 7vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    height: 122vw;
+
+    .gift_card {
+        position: absolute;
+        background-size: cover;
+        opacity: 0;
+        user-select: none;
+        animation-name: fader;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
+
+        p {
+            color: white;
+            font-size: 6.5vw;
+        }
+
+        img {
+            border-radius: 5vw;
+            width: 85%;
+        }
+    }
+
+    .gift_card:nth-child(0) {
+        animation-delay: 0s;
+    }
+
+    .gift_card:nth-child(1) {
+        animation-delay: 3s;
+    }
+
+    .gift_card:nth-child(2) {
+        animation-delay: 6s;
+    }
+}
+
+.loop_dots_wrapper {
+    position: relative;
+    text-align: center;
+    bottom: 10vw;
+
+    .loop_dots {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        margin-right: 1.5vw;
+        background-color: #451E5D;
+        border: 2px solid white;
+        border-radius: 50%;
+        animation-name: dots;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
+    }
+
+    .loop_dots:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .loop_dots:nth-child(2) {
+        animation-delay: 3s;
+    }
+
+    .loop_dots:nth-child(3) {
+        animation-delay: 6s;
+    }
+}
+
+.desktop_gift_card_wrapper {
+    display: none;
+}
+
+.review_text {
+    position: relative;
+    text-align: center;
+    font-size: 7.5vw;
+    margin-top: 5vw;
+    color: #451E5D;
+}
+
+.reviews {
+    text-align: center;
+}
+
+/*
+Left for review section
+*/
+
+.recommended_carousel {
+    position: relative;
+    margin-top: 5vw;
+    height: auto;
+    overflow-x: scroll;
+    scrollbar-width: none;
+
+    .recommended_card_container {
+        position: relative;
+        display: inline-flex;
+        width: 100%;
+
+        .recommended_card_wrapper {
+            position: relative;
+            width: 100%;
+            border: 1px solid red;
+    
+            .recommended_card {
+                position: relative;
+                text-align: center;
+                width: 80%;
+                height: 110vw;
+                margin: auto;
+                background-color: white;
+                border: 2px solid black;
+                border-radius: 5vw;
+    
+                span {
+                    position: absolute;
+                    user-select: none;
+                    z-index: 2;
+                    color: #451E5D;
+                }
+            
+                .old_price {
+                    background-color: #9BCBEB;
+                    top: 3vw;
+                    left: 2vw;
+                    padding: 2vw;
+                    border-radius: 5vw;
+                }
+            
+                .savings {
+                    background-color: #9BCBEB;
+                    top: 5vw;
+                    right: 7vw;
+                    padding: 2vw;
+                    border-radius: 50vw;
+                }
+            
+                img {
+                    width: 55%;
+                    margin-top: 11vw;
+                    transition: 0.2s;
+                    user-select: none;
+                }
+            
+                img:hover {
+                    transform: scale(1.03);
+                }
+            
+                p {
+                    padding-left: 1vw;
+                    color: #451E5D;
+                    font-size: 4vw;
+                }
+            
+                button {
+                    position: absolute;
+                    user-select: none;
+                    background-color: #451E5D;
+                    color: white;
+                    font-family: Abril Fatface;
+                    font-size: 4vw;
+                    width: 50vw;
+                    padding: 1.5vw;
+                    border-radius: 3vw;
+                    transition: 0.2s;
+                    cursor: pointer;
+                    bottom: 10vw;
+                    right: 15vw;
+                }
+            
+                button:hover {
+                    border: 2px solid #451E5D;
+                    background-color: white;
+                    color: #451E5D;
+                }
+            }
+        }
+    }
+}
+
+.dots_wrapper {
+    position: relative;
+    text-align: center;
+    bottom: 15vw;
+    margin-bottom: 5vw;
+
+    .dots {
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        margin-right: 1.5vw;
+        background-color: white;
+        border: 2px solid #451E5D;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: #451E5D;
+    }
+}
+
+.present_guide {
+    position: relative;
+    text-align: center;
+
+    * {
+        color: #451E5D;
+    }
+
+    h1 {
+        margin: 7vw;
+    }
+
+    img {
+        user-select: none;
+        width: 70%;
+    }
+
+    p {
+        font-size: larger;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .email_input {
+        position: relative;
+        display: inline-flex;
+        height: 7vw;
+        
+        .email {
+            width: 65vw;
+            border-radius: 1vw 0vw 0vw 1vw;
+            border: 1px solid black;
+            padding-left: 2vw;
+            font-family: Inter;
+        }
+
+        .email::placeholder {
+            color: black;
+        }
+    
+        .join {
+            width: 20vw;
+            border: none;
+            border-radius: 0vw 1vw 1vw 0vw;
+            background-color: #451E5D;
+            color: white;
+            font-family: Inter;
+            cursor: pointer;
+        }
+    }
+}
+
+.bottomnav {
+    position: absolute;
+    background-color: #451E5D;
+    margin-top: 10vw;
+    width: 100%;
+    height: 70vw;
+    text-align: center;
+
+    .logo {
+        user-select: none;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+        height: 18vw;
+    }
+
+    p {
+        margin-bottom: 5vw;
+        color: white;
+        font-family: Inter;
+        text-decoration: underline;
+    }
+}
+
+@keyframes fader {
+    0% {
+        opacity: 0;
+    }
+    16.66% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    48.66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes dots {
+    0% {
+        background-color: #451E5D;
+    }
+    16.66% {
+        background-color: white;
+    }
+    33.33% {
+        background-color: white;
+    }
+    48.66% {
+        background-color: #451E5D;
+    }
+    100% {
+        background-color: #451E5D;
+    }
+}
+
+@font-face { 
+    font-family: 'Abril Fatface';
+    src: url('../fonts/abrilfatface-regular-webfont.woff') format('woff');
+}
+
+@font-face { 
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.woff') format('woff');
+}
+
+@font-face { 
+    font-family: 'Rasa';
+    src: url('../fonts/R.woff') format('woff');
+}
