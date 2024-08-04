@@ -26,11 +26,6 @@
         <div class="product_name">
             <h1>card</h1>
         </div>
-        <div class="product_counter">
-            <span class="down" onClick='decreaseCount(event, this)'>-</span>
-            <input type="text" value="1">
-            <span class="up" onClick='increaseCount(event, this)'>+</span>
-        </div>
         <div class="add_to_cart">
             <button class="cartbtn">add to cart - 
                 <span id="product_cost" class="product_cost">$8.00</span>
@@ -43,17 +38,46 @@
         <button id="read_more" class="read_more" onclick="readMore()">read more</button>
     </div>
 
-    <!--Bundle section-->
-    <div class="bundle_text">bundle up and save</div>
-    <section class="bundle_wrapper">
-        <div class="bundle_card">
-            <span id="bundle_old_price" class="bundle_old_price">was $33</span>
-            <span id="bundle_savings" class="bundle_savings">save<br>42%</span>
-            <a href="../html/product.html"><img id="bundle_img" src="../img/products/FWORDS_BUNDLE.png" alt="" draggable="false"></a>
-            <p id="bundle_title">fwords card bundle</p>
-            <button id="bundle_add">add - $19</button>
+    <!--Recommended products section-->
+    <div class="recommended_products">recommended products</div>
+    <section class="recommended_carousel">
+        <div class="recommended_card_container">
+            <div class="recommended_card_wrapper">
+                <div class="recommended_card">
+                    <span class="old_price">was $11</span>
+                    <span class="savings">save<br>27%</span>
+                    <a href="../html/loveProduct.html"><img src="../img/products/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD.png" alt="" draggable="false"></a>
+                    <p>i love you so much my daal-ling card</p>
+                    <button>add - $8</button>
+                </div>
+            </div>
+            <div class="recommended_card_wrapper">
+                <div class="recommended_card">
+                    <span class="old_price">was $11</span>
+                    <span class="savings">save<br>27%</span>
+                    <a href="../html/moolaProduct.html"><img src="../img/products/LETS_MAKE_THIS_MOOLA_CARD.png" alt="" draggable="false"></a>
+                    <p>i love you so much my daal-ling card</p>
+                    <button>add - $8</button>
+                </div>
+            </div>
+            <div class="recommended_card_wrapper">
+                <div class="recommended_card">
+                    <span class="old_price">was $11</span>
+                    <span class="savings">save<br>27%</span>
+                    <a href="../html/bithdayProduct.html"><img src="../img/products/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD.png" alt="" draggable="false"></a>
+                    <p>i love you so much my daal-ling card</p>
+                    <button>add - $8</button>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!--Dot indicator of selected products only for mobile-->
+    <div class="dots_wrapper">
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+    </div>
 
     <!--Gift card text-->
     <div class="gift_text">the perfect gift for</div>
@@ -102,46 +126,6 @@
     <!--Review section-->
     <div class="review_text">see what everyones<br>saying</div>
     <div class="reviews">left for future review section</div>
-
-    <!--Recommended products section-->
-    <section class="recommended_carousel">
-        <div class="recommended_card_container">
-            <div class="recommended_card_wrapper">
-                <div class="recommended_card">
-                    <span class="old_price">was $11</span>
-                    <span class="savings">save<br>27%</span>
-                    <a href="../html/loveProduct.html"><img src="../img/products/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD.png" alt="" draggable="false"></a>
-                    <p>i love you so much my daal-ling card</p>
-                    <button>add - $8</button>
-                </div>
-            </div>
-            <div class="recommended_card_wrapper">
-                <div class="recommended_card">
-                    <span class="old_price">was $11</span>
-                    <span class="savings">save<br>27%</span>
-                    <a href="../html/moolaProduct.html"><img src="../img/products/LETS_MAKE_THIS_MOOLA_CARD.png" alt="" draggable="false"></a>
-                    <p>i love you so much my daal-ling card</p>
-                    <button>add - $8</button>
-                </div>
-            </div>
-            <div class="recommended_card_wrapper">
-                <div class="recommended_card">
-                    <span class="old_price">was $11</span>
-                    <span class="savings">save<br>27%</span>
-                    <a href="../html/bithdayProduct.html"><img src="../img/products/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD.png" alt="" draggable="false"></a>
-                    <p>i love you so much my daal-ling card</p>
-                    <button>add - $8</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Dot indicator of selected products only for mobile-->
-    <div class="dots_wrapper">
-        <span class="dots"></span>
-        <span class="dots"></span>
-        <span class="dots"></span>
-    </div>
 
     <!--Present guide section-->
     <section class="present_guide">

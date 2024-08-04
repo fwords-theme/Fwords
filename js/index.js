@@ -25,7 +25,7 @@ function currentSlide(n) {
 function showSlides(n) {
     if (window.innerWidth < 768) {
         let i;
-        let slides = document.getElementsByClassName("product_card_wrapper");
+        let slides = document.getElementsByClassName("product_card_wrapper")
         let dots = document.getElementsByClassName("dots");
         if (n > slides.length) { slideIndex = 1 }
         if (n < 1) { slideIndex = slides.length }
@@ -52,7 +52,7 @@ function handleTouchMove(event) {
 function handleTouchEnd() {
     if (touchStartX && touchEndX) {
         let swipeDistance = touchStartX - touchEndX;
-        if (Math.abs(swipeDistance) > 50) { // Detect a significant swipe distance
+        if (Math.abs(swipeDistance) > 100) { // Detect a significant swipe distance
             if (swipeDistance > 0) {
                 // Swipe left
                 plusSlides(1);
@@ -69,6 +69,6 @@ function handleTouchEnd() {
 
 // Adding event listeners for touch events
 const slideshowContainer = document.querySelector('.product_card_carousel');
-slideshowContainer.addEventListener('touchstart', handleTouchStart, false);
-slideshowContainer.addEventListener('touchmove', handleTouchMove, false);
-slideshowContainer.addEventListener('touchend', handleTouchEnd, false);
+slideshowContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
+slideshowContainer.addEventListener('touchmove', handleTouchMove, { passive: true });
+slideshowContainer.addEventListener('touchend', handleTouchEnd, { passive: true });

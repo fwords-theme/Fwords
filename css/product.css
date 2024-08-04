@@ -42,6 +42,10 @@ body {
             margin-top: 10vw;
             user-select: none;
         }
+
+        #showcase {
+            width: 100%;
+        }
     }
 
     .product_img_selector {
@@ -81,62 +85,8 @@ body {
         color: white;
     }
 
-    .product_counter {
-        border: 2px solid white;
-        border-radius: 10px;
-        width: 30vw;
-        display: inline-flex;
-        color: white;
-
-        input {
-            font-family: Rasa;
-            font-weight: bolder;
-            font-size: 20px;
-            text-align: center;
-            background-color: #451E5D;
-            color: white;
-            border: none;
-            user-select: none;
-            width: 50px;
-        }
-
-        span {
-            user-select: none;
-            font-family: Rasa;
-            font-weight: bolder;
-            font-size: 25px;
-            margin: auto;
-            cursor: pointer;
-        }
-
-        .down {
-            margin-left: 3vw;
-        }
-
-        .up {
-            margin-right: 3vw;
-        }
-    }
-
-    .cartbtn {
-        margin-top: 5vw;
-        font-family: Abril Fatface;
-        background-color: white;
-        color: #451E5D;
-        border: none;
-        border-radius: 3vw;
-        font-size: 6vw;
-        padding: 3vw;
-        padding-left: 5vw;
-        padding-right: 5vw;
-        transition: 0.2s;
-    }
-
-    .cartbtn:hover {
-        background-color: #451E5D;
-        color: white;
-        border: 2px solid white;
-        cursor: pointer;
+    .buy_button {
+        margin: auto;
     }
 
     .product_description {
@@ -352,6 +302,14 @@ body {
 Left for review section
 */
 
+.recommended_products {
+    position: relative;
+    text-align: center;
+    color: #451E5D;
+    margin-top: 5vw;
+    font-size: 7.5vw;
+}
+
 .recommended_carousel {
     position: relative;
     margin-top: 5vw;
@@ -367,7 +325,8 @@ Left for review section
         .recommended_card_wrapper {
             position: relative;
             width: 100%;
-            border: 1px solid red;
+            animation-name: slide;
+            animation-duration: 1s;
     
             .recommended_card {
                 position: relative;
@@ -448,8 +407,7 @@ Left for review section
 .dots_wrapper {
     position: relative;
     text-align: center;
-    bottom: 15vw;
-    margin-bottom: 5vw;
+    margin-top: 5vw;
 
     .dots {
         display: inline-block;
@@ -459,7 +417,6 @@ Left for review section
         background-color: white;
         border: 2px solid #451E5D;
         border-radius: 50%;
-        cursor: pointer;
     }
 
     .active {
@@ -576,6 +533,11 @@ Left for review section
     100% {
         background-color: #451E5D;
     }
+}
+
+@keyframes slide {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 @font-face { 
