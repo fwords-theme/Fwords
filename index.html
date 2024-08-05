@@ -16,7 +16,7 @@
     <!--Main hero and bg section-->
     <div class="hero_container">
         <img class="hero" src="img/showcase/HERO_IMAGE.jpg" alt="hero">
-        <div class="hero_text">the perfect cards for your favorite<br> people</div>
+        <div class="hero_text">the perfect cards for your favorite<br id="hero_break"> people</div>
         <button id="shopbtn_hero" class="shop">shop now</button>
     </div>
 
@@ -26,10 +26,10 @@
         <div class="product_card_carousel">
             <div class="product_card_wrapper">
                 <div class="product_card">
-                    <span class="old_price">was $11</span>
-                    <span class="savings">save<br>27%</span>
-                    <a href="html/loveProduct.html"><img src="img/products/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD.png" alt="" draggable="false"></a>
-                    <p>i love you so much my daal-ling card</p>
+                    <span class="product_span" id="old_price">was $11</span>
+                    <span class="product_span" id="savings">save<br>27%</span>
+                    <a href="html/loveProduct.html"><img class="product_img" src="img/products/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD.png" alt="" draggable="false"></a>
+                    <p class="product_title">i love you so much my daal-ling card</p>
                     <div id='product-component-1722296110155' class="buy_button"></div>
                     <script src="js/item1_shopify.js"></script>
                     <style>@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap');</style>
@@ -37,10 +37,10 @@
             </div>
             <div class="product_card_wrapper">
                 <div class="product_card">
-                    <span class="old_price">was $11</span>
-                    <span class="savings">save<br>27%</span>
-                    <a href="html/moolaProduct.html"><img src="img/products/LETS_MAKE_THIS_MOOLA_CARD.png" alt="" draggable="false"></a>
-                    <p>lets make this moola card</p>
+                    <span class="product_span" id="old_price">was $11</span>
+                    <span class="product_span" id="savings">save<br>27%</span>
+                    <a href="html/moolaProduct.html"><img class="product_img" src="img/products/LETS_MAKE_THIS_MOOLA_CARD.png" alt="" draggable="false"></a>
+                    <p class="product_title">lets make this moola card</p>
                     <div id='product-component-1722296236225' class="buy_button"></div>
                     <script src="js/item2_shopify.js"></script>
                     <style>@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap');</style>
@@ -48,10 +48,10 @@
             </div>
             <div class="product_card_wrapper">
                 <div class="product_card">
-                    <span class="old_price">was $11</span>
-                    <span class="savings">save<br>27%</span>
-                    <a href="html/bithdayProduct.html"><img src="img/products/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD.png" alt="" draggable="false"></a>
-                    <p>you are naan-stoppable! happy birthday! card</p>
+                    <span class="product_span" id="old_price">was $11</span>
+                    <span class="product_span" id="savings">save<br>27%</span>
+                    <a href="html/bithdayProduct.html"><img class="product_img" src="img/products/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD.png" alt="" draggable="false"></a>
+                    <p class="product_title">you are naan-stoppable! happy birthday! card</p>
                     <div id='product-component-1722296298355' class="buy_button"></div>
                     <script src="js/item3_shopify.js"></script>
                     <style>@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap');</style>
@@ -73,16 +73,16 @@
     <!--Gift card wrapper used only for mobile-->
     <section class="gift_card_wrapper">
         <div class="gift_card">
-            <p>rekindling with your best friend</p>
-            <img src="img/showcase/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD_SHOWCASE.png" alt="" draggable="false">
+            <p class="gift_desc">rekindling with your best friend</p>
+            <img class="gift_img" src="img/showcase/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD_SHOWCASE.png" alt="" draggable="false">
         </div>
         <div class="gift_card">
-            <p>trying to “happy  birthday” back into someones life</p>
-            <img src="img/showcase/LETS_MAKE_THIS_MOOLA_CARD_SHOWCASE.png" alt="" draggable="false">
+            <p class="gift_desc">trying to “happy  birthday” back into someones life</p>
+            <img class="gift_img" src="img/showcase/LETS_MAKE_THIS_MOOLA_CARD_SHOWCASE.png" alt="" draggable="false">
         </div>
         <div class="gift_card">
-            <p>the friend who laughs at everything</p>
-            <img src="img/showcase/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD_SHOWCASE.png" alt="" draggable="false">
+            <p class="gift_desc">the friend who laughs at everything</p>
+            <img class="gift_img" src="img/showcase/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD_SHOWCASE.png" alt="" draggable="false">
         </div>
     </section>
 
@@ -117,11 +117,11 @@
     <div class="bundle_text">bundle up and save</div>
     <section class="bundle_wrapper">
         <div class="bundle_card">
-            <span id="bundle_old_price" class="bundle_old_price">was $33</span>
-            <span id="bundle_savings" class="bundle_savings">save<br>42%</span>
-            <a href="html/bundleProduct.html"><img id="bundle_img" src="img/products/FWORDS_BUNDLE.png" alt="" draggable="false"></a>
-            <p id="bundle_title">fwords card bundle</p>
-            <button id="bundle_add">add - $19</button>
+            <span id="bundle_old_price" class="bundle_span">was $33</span>
+            <span id="bundle_savings" class="bundle_span">save<br>42%</span>
+            <a href="html/bundleProduct.html"><img class="bundle_img" src="img/products/FWORDS_BUNDLE.png" alt="" draggable="false"></a>
+            <p class="bundle_title">fwords card bundle</p>
+            <button class="buy_bundle">add - $19</button>
         </div>
     </section>
 
@@ -131,10 +131,10 @@
 
     <!--Present guide section-->
     <section class="present_guide">
-        <p class="p_h1">did you buy another gift card instead of an actual present?</p>
-        <img src="img/showcase/EMAIL_CAPTURE_IMAGE.png" alt="" draggable="false">
-        <p class="p_h1">its okay, we got you!</p>
-        <p>leave your email below and well send you a gift guide for all of your loved ones.</p>
+        <p class="present_h1">did you buy another gift card instead of an actual present?</p>
+        <img class="present_img" src="img/showcase/EMAIL_CAPTURE_IMAGE.png" alt="" draggable="false">
+        <p class="present_h1">its okay, we got you!</p>
+        <p class="present_p">leave your email below and well send you a gift guide for all of your loved ones.</p>
         <div class="email_input">
             <input id="email" class="email" type="text" placeholder="ENTER EMAIL HERE">
             <button id="join" class="join">JOIN US</button>
@@ -143,11 +143,11 @@
 
     <!--Present guide section used only for desktop-->
     <section class="desktop_present_guide">
-        <div class="present_img"><img src="img/showcase/EMAIL_CAPTURE_IMAGE.png" alt="" draggable="false"></div>
-        <div class="present_desc">
-            <p class="p_h1">did you buy another gift card instead of an actual present?</p>
-            <p class="p_h2">its okay, we got you!</p>
-            <p>leave your email below and well send you a gift guide for all of your loved ones.</p>
+        <div class="desk_present_img"><img src="img/showcase/EMAIL_CAPTURE_IMAGE.png" alt="" draggable="false"></div>
+        <div class="desk_present_desc">
+            <p class="desk_present_h1">did you buy another gift card instead of an actual present?</p>
+            <p class="desk_present_h2">its okay, we got you!</p>
+            <p class="desk_present_p">leave your email below and well send you a gift guide for all of your loved ones.</p>
             <div class="desktop_email_input">
                 <input class="desktop_email" type="text" placeholder="ENTER EMAIL HERE">
                 <button class="desktop_join">JOIN US</button>
@@ -157,15 +157,15 @@
 
     <!--Bottom nav bar with company links-->
     <div class="bottomnav">
-        <a href="index.html"><img class="logo" src="img/logo/fwords_logo_mono.png" alt="fwords_logo_mono" draggable="false"></a>
-        <a ><p>Privacy Policy</p></a>
-        <a ><p>Return Policy</p></a>
-        <a ><p>Term & Conditions</p></a>
+        <a href="index.html"><img class="bottom_logo" src="img/logo/fwords_logo_mono.png" alt="fwords_logo_mono" draggable="false"></a>
+        <a ><p class="bottom_link">Privacy Policy</p></a>
+        <a ><p class="bottom_link">Return Policy</p></a>
+        <a ><p class="bottom_link">Term & Conditions</p></a>
     </div>
 
     <!--Bottom nav bar for desktop only-->
     <div class="desktop_bottomnav">
-        <a href="index.html"><img class="logo" src="img/logo/fwords_logo_mono.png" alt="fwords_logo_mono" draggable="false"></a>
+        <a href="index.html"><img class="bottom_logo" src="img/logo/fwords_logo_mono.png" alt="fwords_logo_mono" draggable="false"></a>
         <div class="separator"></div>
         <div class="links">
             <a ><p>Privacy Policy</p></a>

@@ -4,6 +4,7 @@ body {
     font-family: Abril Fatface;
 }
 
+/*-- Top Navigation Bar Section --*/
 .topnav {
     background-color: #451E5D;
     width: 100%;
@@ -12,65 +13,67 @@ body {
     position: fixed;
     text-align: center;
     z-index: 10;
-
-    .logo {
-        user-select: none;
-        height: 35px;
-        padding-top: 10px;
-    }
-
-    .shop_topnav {
-        display: none;
-    }
 }
 
+.logo {
+    user-select: none;
+    height: 35px;
+    padding-top: 10px;
+}
+
+.shop_topnav {
+    display: none;
+}
+
+/*-- Hero Section --*/
 .hero_container {
     position: relative;
-
-    .hero {
-        position: relative;
-        width: 100%;
-        background-size: cover;
-        filter: brightness(60%);
-    }
-
-    .hero_text {
-        position: relative;
-        bottom: 55vw;
-        margin-left: 4vw;
-        font-size: 7vw;
-        color: white;
-
-        br {
-            display: none;
-        }
-    }
-
-    .shop {
-        position: relative;
-        bottom: 52vw;
-        border: 2px solid white;
-        border-width: thin;
-        border-radius: 2vw;
-        margin-left: 7vw;
-        background-color: #451E5D;
-        color: white;
-        font-size: 4vw;
-        font-family: Abril Fatface;
-        padding: 2vw;
-        padding-left: 10vw;
-        padding-right: 10vw;
-        transition: 0.2s;
-        cursor: pointer;
-    }
-
-    .shop:hover {
-        border: 1px solid #451E5D;
-        background-color: white;
-        color: #451E5D;
-    }
 }
 
+.hero {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    filter: brightness(60%);
+}
+
+.hero_text {
+    position: relative;
+    bottom: 55vw;
+    margin-left: 4vw;
+    font-size: 7vw;
+    color: white;
+}
+
+#hero_break {
+    display: none;
+}
+
+.shop {
+    position: relative;
+    bottom: 52vw;
+    border: 2px solid white;
+    border-width: thin;
+    border-radius: 2vw;
+    margin-left: 7vw;
+    background-color: #451E5D;
+    color: white;
+    font-size: 4vw;
+    font-family: Abril Fatface;
+    padding: 2vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.shop:hover {
+    border: 1px solid #451E5D;
+    background-color: white;
+    color: #451E5D;
+}
+
+/*-- Product Carousel Section --*/
 .product_text {
     position: relative;
     text-align: center;
@@ -84,84 +87,84 @@ body {
     position: relative;
     height: auto;
     bottom: 20vw;
+}
 
-    .product_card_carousel {
-        position: relative;
-        display: inline-flex;
-        width: 100%;
+.product_card_carousel {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+}
 
-        .product_card_wrapper {
-            position: relative;
-            width: inherit;
-            display: none;
-            animation-name: slide;
-            animation-duration: 1s;
-    
-            .product_card {
-                position: relative;
-                text-align: center;
-                width: 80%;
-                height: 110vw;
-                margin: auto;
-                background-color: white;
-                border: 2px solid black;
-                border-radius: 5vw;
-    
-                span {
-                    position: absolute;
-                    user-select: none;
-                    z-index: 2;
-                    color: #451E5D;
-                }
-            
-                .old_price {
-                    background-color: #9BCBEB;
-                    top: 3vw;
-                    left: 2vw;
-                    padding: 2vw;
-                    border-radius: 5vw;
-                }
-            
-                .savings {
-                    background-color: #9BCBEB;
-                    top: 5vw;
-                    right: 7vw;
-                    padding: 2vw;
-                    border-radius: 50vw;
-                }
+.product_card_wrapper {
+    position: relative;
+    width: inherit;
+    display: none;
+    animation-name: slide;
+    animation-duration: 1s;
+}
 
-                .product {
-                    overflow: visible;
-                    width: 85%;
-                    position: relative;
-                    margin: auto;
-                    margin-top: 10vw;
-                }
-            
-                img {
-                    width: 55%;
-                    margin-top: 11vw;
-                    transition: 0.2s;
-                    user-select: none;
-                }
-            
-                img:hover {
-                    transform: scale(1.03);
-                }
-            
-                p {
-                    padding-left: 1vw;
-                    color: #451E5D;
-                    font-size: 4vw;
-                }
-            
-                .buy_button {
-                    position: relative;
-                    margin: auto;
-                }
-            }
-        }
-    }
+.product_card {
+    position: relative;
+    text-align: center;
+    width: 80%;
+    height: 110vw;
+    margin: auto;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5vw;
+}
+
+.product_span {
+    position: absolute;
+    user-select: none;
+    z-index: 2;
+    color: #451E5D;
+}
+
+#old_price {
+    background-color: #9BCBEB;
+    top: 3vw;
+    left: 2vw;
+    padding: 2vw;
+    border-radius: 5vw;
+}
+
+#savings {
+    background-color: #9BCBEB;
+    top: 5vw;
+    right: 7vw;
+    padding: 2vw;
+    border-radius: 50vw;
+}
+
+.product {
+    overflow: visible;
+    width: 85%;
+    position: relative;
+    margin: auto;
+    margin-top: 10vw;
+}
+
+.product_img {
+    width: 55%;
+    margin-top: 11vw;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.product_img:hover {
+    transform: scale(1.03);
+}
+
+.product_title {
+    padding-left: 1vw;
+    color: #451E5D;
+    font-size: 4vw;
+}
+
+.buy_button {
+    position: relative;
+    margin: auto;
 }
 
 .dots_wrapper {
@@ -169,23 +172,24 @@ body {
     text-align: center;
     bottom: 15vw;
     margin-bottom: 5vw;
-
-    .dots {
-        display: inline-block;
-        height: 16px;
-        width: 16px;
-        margin-right: 1.5vw;
-        background-color: white;
-        border: 2px solid #451E5D;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .active {
-        background-color: #451E5D;
-    }
 }
 
+.dots {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 1.5vw;
+    background-color: white;
+    border: 2px solid #451E5D;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #451E5D;
+}
+
+/*-- Gift Section --*/
 .gift_text {
     position: relative;
     text-align: center;
@@ -202,75 +206,76 @@ body {
     margin-left: 3vw;
     margin-right: 3vw;
     height: 122vw;
+}
 
-    .gift_card {
-        position: absolute;
-        background-size: cover;
-        opacity: 0;
-        user-select: none;
-        animation-name: fader;
-        animation-duration: 9s;
-        animation-iteration-count: infinite;
+.gift_card {
+    position: absolute;
+    background-size: cover;
+    opacity: 0;
+    user-select: none;
+    animation-name: fader;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
 
-        p {
-            color: white;
-            font-size: 6.5vw;
-        }
+.gift_desc {
+    color: white;
+    font-size: 6.5vw;
+}
 
-        img {
-            border-radius: 5vw;
-            width: 85%;
-        }
-    }
+.gift_img {
+    border-radius: 5vw;
+    width: 85%;
+}
 
-    .gift_card:nth-child(0) {
-        animation-delay: 0s;
-    }
+.gift_card:nth-child(0) {
+    animation-delay: 0s;
+}
 
-    .gift_card:nth-child(1) {
-        animation-delay: 3s;
-    }
+.gift_card:nth-child(1) {
+    animation-delay: 3s;
+}
 
-    .gift_card:nth-child(2) {
-        animation-delay: 6s;
-    }
+.gift_card:nth-child(2) {
+    animation-delay: 6s;
 }
 
 .loop_dots_wrapper {
     position: relative;
     text-align: center;
     bottom: 10vw;
+}
 
-    .loop_dots {
-        display: inline-block;
-        height: 10px;
-        width: 10px;
-        margin-right: 1.5vw;
-        background-color: #451E5D;
-        border: 2px solid white;
-        border-radius: 50%;
-        animation-name: dots;
-        animation-duration: 9s;
-        animation-iteration-count: infinite;
-    }
+.loop_dots {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-right: 1.5vw;
+    background-color: #451E5D;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation-name: dots;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
 
-    .loop_dots:nth-child(1) {
-        animation-delay: 0s;
-    }
+.loop_dots:nth-child(1) {
+    animation-delay: 0s;
+}
 
-    .loop_dots:nth-child(2) {
-        animation-delay: 3s;
-    }
+.loop_dots:nth-child(2) {
+    animation-delay: 3s;
+}
 
-    .loop_dots:nth-child(3) {
-        animation-delay: 6s;
-    }
+.loop_dots:nth-child(3) {
+    animation-delay: 6s;
 }
 
 .desktop_gift_card_wrapper {
     display: none;
 }
 
+/*-- Bundle Product Card Section --*/
 .bundle_text {
     position: relative;
     text-align: center;
@@ -281,78 +286,79 @@ body {
 .bundle_wrapper {
     position: relative;
     margin-top: 5vw;
-
-    .bundle_card {
-        position: relative;
-        text-align: center;
-        background-color: white;
-        border: 2px solid black;
-        border-radius: 5vw;
-        height: 95vw;
-        margin-left: 7vw;
-        margin-right: 7vw;
-
-        span {
-            position: absolute;
-            user-select: none;
-            z-index: 2;
-            color: #451E5D;
-        }
-    
-        .bundle_old_price {
-            background-color: #9BCBEB;
-            top: 3vw;
-            left: 2vw;
-            padding: 2vw;
-            border-radius: 5vw;
-        }
-    
-        .bundle_savings {
-            background-color: #9BCBEB;
-            top: 5vw;
-            right: 7vw;
-            padding: 3vw;
-            border-radius: 50%;
-        }
-    
-        img {
-            width: 85%;
-            margin-top: 20vw;
-            transition: 0.2s;
-            user-select: none;
-        }
-    
-        img:hover {
-            transform: scale(1.03);
-        }
-    
-        p {
-            padding-left: 1vw;
-            color: #451E5D;
-            font-size: 4vw;
-        }
-    
-        button {
-            user-select: none;
-            background-color: #451E5D;
-            color: white;
-            font-family: Abril Fatface;
-            font-size: 4vw;
-            width: 50%;
-            padding: 1.5vw;
-            border-radius: 3vw;
-            transition: 0.2s;
-            cursor: pointer;
-        }
-    
-        button:hover {
-            border: 2px solid #451E5D;
-            background-color: white;
-            color: #451E5D;
-        }
-    }
 }
 
+.bundle_card {
+    position: relative;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5vw;
+    height: 95vw;
+    margin-left: 7vw;
+    margin-right: 7vw;
+}
+
+.bundle_span {
+    position: absolute;
+    user-select: none;
+    z-index: 2;
+    color: #451E5D;
+}
+
+#bundle_old_price {
+    background-color: #9BCBEB;
+    top: 3vw;
+    left: 2vw;
+    padding: 2vw;
+    border-radius: 5vw;
+}
+
+#bundle_savings {
+    background-color: #9BCBEB;
+    top: 5vw;
+    right: 7vw;
+    padding: 3vw;
+    border-radius: 50%;
+}
+
+.bundle_img {
+    width: 85%;
+    margin-top: 20vw;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.bundle_img:hover {
+    transform: scale(1.03);
+}
+
+.bundle_title {
+    padding-left: 1vw;
+    color: #451E5D;
+    font-size: 4vw;
+}
+
+.buy_bundle {
+    user-select: none;
+    background-color: #451E5D;
+    color: white;
+    font-family: Abril Fatface;
+    font-size: 4vw;
+    width: 50%;
+    padding: 1.5vw;
+    border-radius: 3vw;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.buy_bundle:hover {
+    border: 2px solid #451E5D;
+    background-color: white;
+    color: #451E5D;
+}
+
+/*-- Review Section (TODO) --*/
 .review_text {
     position: relative;
     text-align: center;
@@ -365,60 +371,59 @@ body {
     text-align: center;
 }
 
+/*-- Present Guide Section --*/
 .desktop_present_guide {display: none;}
 
 .present_guide {
     position: relative;
     text-align: center;
-
-    * {
-        color: #451E5D;
-    }
-
-    img {
-        user-select: none;
-        width: 70%;
-    }
-
-    p {
-        font-size: larger;
-        padding-left: 2vw;
-        padding-right: 2vw;
-    }
-
-    .p_h1 {
-        font-size: 6vw;
-    }
-
-    .email_input {
-        position: relative;
-        display: inline-flex;
-        height: 7vw;
-        
-        .email {
-            width: 65vw;
-            border-radius: 1vw 0vw 0vw 1vw;
-            border: 1px solid black;
-            padding-left: 2vw;
-            font-family: Inter;
-        }
-
-        .email::placeholder {
-            color: black;
-        }
-    
-        .join {
-            width: 20vw;
-            border: none;
-            border-radius: 0vw 1vw 1vw 0vw;
-            background-color: #451E5D;
-            color: white;
-            font-family: Inter;
-            cursor: pointer;
-        }
-    }
+    color: #451E5D;
 }
 
+.present_img {
+    user-select: none;
+    width: 70%;
+}
+
+.present_p {
+    font-size: larger;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.present_h1 {
+    font-size: 6vw;
+}
+
+.email_input {
+    position: relative;
+    display: inline-flex;
+    height: 7vw;
+}
+
+.email {
+    width: 65vw;
+    border-radius: 1vw 0vw 0vw 1vw;
+    border: 1px solid black;
+    padding-left: 2vw;
+    font-family: Inter;
+}
+
+.email::placeholder {
+    color: black;
+}
+
+.join {
+    width: 20vw;
+    border: none;
+    border-radius: 0vw 1vw 1vw 0vw;
+    background-color: #451E5D;
+    color: white;
+    font-family: Inter;
+    cursor: pointer;
+}
+
+/*-- Bottom Navigation Bar Section --*/
 .bottomnav {
     position: absolute;
     background-color: #451E5D;
@@ -426,20 +431,20 @@ body {
     width: 100%;
     height: 70vw;
     text-align: center;
+}
 
-    .logo {
-        user-select: none;
-        margin-top: 5vw;
-        margin-bottom: 5vw;
-        height: 18vw;
-    }
+.bottom_logo {
+    user-select: none;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    height: 18vw;
+}
 
-    p {
-        margin-bottom: 5vw;
-        color: white;
-        font-family: Inter;
-        text-decoration: underline;
-    }
+.bottom_link {
+    margin-bottom: 5vw;
+    color: white;
+    font-family: Inter;
+    text-decoration: underline;
 }
 
 .desktop_bottomnav {
@@ -537,7 +542,7 @@ body {
             margin-left: 1.875rem;
             bottom: 16.25rem;
 
-            br {
+            #hero_break {
                 display: block;
             }
         }
@@ -580,18 +585,18 @@ body {
                     margin-left: 1.5625rem;
                     margin-right: 1.5625rem;
 
-                    span {
+                    .product_span {
                         font-size: 0.9375rem;
                     }
 
-                    .old_price {
+                    #old_price {
                         background-color: #9BCBEB;
                         top: 1.25rem;
                         left: 0.9375rem;
                         padding: 0.625rem;
                     }
                 
-                    .savings {
+                    #savings {
                         background-color: #9BCBEB;
                         top: 1.25rem;
                         right: 1.875rem;
@@ -614,7 +619,7 @@ body {
                         transform: scale(1.03);
                     }
                 
-                    p {
+                    .product_title {
                         padding: 0.625rem;
                         color: #451E5D;
                         font-size: 1rem;
@@ -934,7 +939,7 @@ body {
             margin-left: 30px;
             bottom: 180px;
 
-            br {
+            #hero_break {
                 display: none;
             }
         }
@@ -1127,8 +1132,8 @@ body {
             background-color: white;
             border: 2px solid black;
             border-radius: 2rem;
-            width: 55rem;
-            height: 37rem;
+            width: 45rem;
+            height: 31rem;
             margin: auto;
     
             span {
@@ -1156,7 +1161,7 @@ body {
             }
         
             img {
-                width: 60%;
+                width: 50%;
                 margin-top: 3rem;
                 transition: 0.2s;
                 user-select: none;
@@ -1177,7 +1182,7 @@ body {
                 background-color: #451E5D;
                 color: white;
                 font-family: Abril Fatface;
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 width: 50%;
                 padding: 0.5rem;
                 border-radius: 2rem;
@@ -1218,7 +1223,7 @@ body {
             text-align: center;
 
             img {
-                width: 70%;
+                width: 100%;
             }
         }
 
@@ -1229,7 +1234,7 @@ body {
                 margin-top: 0;
                 font-size: 3rem;
                 padding-right: 2rem;
-                margin-bottom: 5rem;
+                margin-bottom: 0;
             }
 
             .p_h2 {
@@ -1283,8 +1288,9 @@ body {
 
         .logo {
             position: relative;
-            width: 15%;
-            margin-top: 2rem;
+            width: 25%;
+            height: fit-content;
+            margin-top: 1rem;
         }
 
         .separator {
