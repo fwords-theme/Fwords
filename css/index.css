@@ -98,7 +98,7 @@ body {
 .product_card_wrapper {
     position: relative;
     width: inherit;
-    display: none;
+    display: block;
     animation-name: slide;
     animation-duration: 1s;
 }
@@ -135,14 +135,6 @@ body {
     right: 7vw;
     padding: 2vw;
     border-radius: 50vw;
-}
-
-.product {
-    overflow: visible;
-    width: 85%;
-    position: relative;
-    margin: auto;
-    margin-top: 10vw;
 }
 
 .product_img {
@@ -504,59 +496,61 @@ body {
 
 /* SECTION USED FOR TABLET DISPLAYS */
 @media screen and (min-width: 768px) {
+
+    /*-- Top Navigation Bar Section --*/
     .topnav {
         height: 3.75rem;
-
-        .logo {
-            height: 60%;
-        }
-
-        .shop_topnav {
-            display: block;
-            position: absolute;
-            right: 0.625rem;
-            top: 0.75rem;
-            margin-right: 0.625rem;
-            border-radius: 0.3125rem;
-            border: none;
-            background-color: white;
-            color: #451E5D;
-            cursor: pointer;
-            font-family: Abril Fatface;
-            font-size: 1.25rem;
-            padding: 0.3125rem;
-            padding-left: 3.125rem;
-            padding-right: 3.125rem;
-        }
     }
 
-    .hero_container {
-        .hero {
-            height: 42.5rem;
-            object-fit: cover;
-        }
-
-        .hero_text {
-            position: relative;
-            font-size: 2.8125rem;
-            margin-left: 1.875rem;
-            bottom: 16.25rem;
-
-            #hero_break {
-                display: block;
-            }
-        }
-
-        .shop {
-            font-size: 1.25rem;
-            bottom: 15rem;
-            margin-left: 3.125rem;
-            padding: 0.625rem;
-            padding-left: 4.375rem;
-            padding-right: 4.375rem;
-        }
+    .logo {
+        height: 60%;
     }
 
+    .shop_topnav {
+        display: block;
+        position: absolute;
+        right: 0.625rem;
+        top: 0.75rem;
+        margin-right: 0.625rem;
+        border-radius: 0.3125rem;
+        border: none;
+        background-color: white;
+        color: #451E5D;
+        cursor: pointer;
+        font-family: Abril Fatface;
+        font-size: 1.25rem;
+        padding: 0.3125rem;
+        padding-left: 3.125rem;
+        padding-right: 3.125rem;
+    }
+
+    /*-- Hero Section --*/
+    .hero {
+        height: 42.5rem;
+        object-fit: cover;
+    }
+
+    .hero_text {
+        position: relative;
+        font-size: 2.8125rem;
+        margin-left: 1.875rem;
+        bottom: 16.25rem;
+    }
+
+    #hero_break {
+        display: block;
+    }
+
+    .shop {
+        font-size: 1.25rem;
+        bottom: 15rem;
+        margin-left: 3.125rem;
+        padding: 0.625rem;
+        padding-left: 4.375rem;
+        padding-right: 4.375rem;
+    }
+
+    /*-- Product Carousel Section --*/
     .product_text {
         position: relative;
         bottom: 10rem;
@@ -565,90 +559,69 @@ body {
     }
 
     .carousel_container {
-        position: relative;
         bottom: 8rem;
         overflow-x: scroll;
         scrollbar-width: none;
-        
-        .product_card_carousel {
-            margin-left: 0;
-            margin-right: 0;
+    }
 
-            .product_card_wrapper {
-                border: none;
-                display: block;
+    .product_card_carousel {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
-                .product_card {
-                    width: 18.75rem;
-                    height: 30rem;
-                    border-radius: 2.5rem;
-                    margin-left: 1.5625rem;
-                    margin-right: 1.5625rem;
+    .product_card_wrapper {
+        display: block;
+    }
 
-                    .product_span {
-                        font-size: 0.9375rem;
-                    }
+    .product_card {
+        width: 21rem;
+        height: 30rem;
+        border-radius: 2.5rem;
+        margin-left: 1.5625rem;
+        margin-right: 1.5625rem;
+    }
 
-                    #old_price {
-                        background-color: #9BCBEB;
-                        top: 1.25rem;
-                        left: 0.9375rem;
-                        padding: 0.625rem;
-                    }
-                
-                    #savings {
-                        background-color: #9BCBEB;
-                        top: 1.25rem;
-                        right: 1.875rem;
-                        padding: 0.75rem;
-                    }
+    .product_span {
+        font-size: 0.9375rem;
+    }
 
-                    .product {
-                        margin-top: 2rem;
-                    }
-                
-                    img {
-                        width: 11.25rem;
-                        margin-top: 3.75rem;
-                        transition: 0.2s;
-                        user-select: none;
-                        pointer-events: auto;
-                    }
-                
-                    img:hover {
-                        transform: scale(1.03);
-                    }
-                
-                    .product_title {
-                        padding: 0.625rem;
-                        color: #451E5D;
-                        font-size: 1rem;
-                    }
-                
-                    button {
-                        position: absolute;
-                        user-select: none;
-                        background-color: #451E5D;
-                        color: white;
-                        font-family: Abril Fatface;
-                        font-size: 0.9375rem;
-                        width: 75%;
-                        padding: 0.625rem;
-                        padding-top: 0.625rem;
-                        transition: 0.2s;
-                        cursor: pointer;
-                        bottom: 3.125rem;
-                        right: 2.375rem;
-                    }
-                }
-            }
-        }
+    #old_price {
+        background-color: #9BCBEB;
+        top: 1.25rem;
+        left: 0.9375rem;
+        padding: 0.625rem;
+    }
+
+    #savings {
+        background-color: #9BCBEB;
+        top: 1.25rem;
+        right: 1.875rem;
+        padding: 0.75rem;
+    }
+
+    .product_img {
+        width: 11.25rem;
+        margin-top: 3.75rem;
+        transition: 0.2s;
+        user-select: none;
+        pointer-events: auto;
+    }
+
+    .product_img:hover {
+        transform: scale(1.03);
+    }
+
+    .product_title {
+        padding: 0.25rem;
+        color: #451E5D;
+        font-size: 0.9rem;
     }
 
     .dots_wrapper {
         display: none;
     }
 
+    /*-- Gift Section --*/
     .gift_text {
         bottom: 6.875rem;
         font-size: 2rem;
@@ -668,203 +641,202 @@ body {
         border-radius: 1.25rem;
         overflow: hidden;
         bottom: 5rem;
+    }
 
-        .desktop_gift_card {
-            position: absolute;
-            text-align: center;
-            width: 100%;
-            margin-left: 0.625rem;
-            opacity: 0;
-            animation-name: fader;
-            animation-duration: 9s;
-            animation-iteration-count: infinite;
+    .desktop_gift_card {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        margin-left: 0.625rem;
+        opacity: 0;
+        animation-name: fader;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
+    }
 
-            p {
-                position: relative;
-                color: white;
-                font-size: 1.5625rem;
+    .desk_gift_p {
+        position: relative;
+        color: white;
+        font-size: 1.5625rem;
+    }
 
-                br {
-                    display: none;
-                }
-            }
+    #desk_gift_br {
+        display: none;
+    }
 
-            img {
-                border-radius: 0.625rem;
-                width: 25.625rem;
-                transition: 0.2s;
-                user-select: none;
-            }
-        }
+    .desk_gift_img {
+        border-radius: 0.625rem;
+        width: 25.625rem;
+        transition: 0.2s;
+        user-select: none;
+    }
 
-        .desktop_gift_card:nth-child(0) {
-            animation-delay: 0s;
-        }
+    .desktop_gift_card:nth-child(0) {
+        animation-delay: 0s;
+    }
 
-        .desktop_gift_card:nth-child(1) {
-            animation-delay: 3s;
-        }
+    .desktop_gift_card:nth-child(1) {
+        animation-delay: 3s;
+    }
 
-        .desktop_gift_card:nth-child(2) {
-            animation-delay: 6s;
-        }
+    .desktop_gift_card:nth-child(2) {
+        animation-delay: 6s;
     }
 
     .loop_dots_wrapper {
         text-align: center;
         bottom: 7.5rem;
-
-        .loop_dots {
-            margin-right: 0.9375rem;
-        }
     }
 
+    .loop_dots {
+        margin-right: 0.9375rem;
+    }
+
+    /*-- Bundle Product Card Section --*/
     .bundle_text {
         position: relative;
         text-align: center;
         font-size: 2.25rem;
-        bottom: 4.375rem;
+        bottom: 4.4rem;
         color: #451E5D;
     }
     
     .bundle_wrapper {
         position: relative;
-        bottom: 3.75rem;
-    
-        .bundle_card {
-            position: relative;
-            background-color: white;
-            border: 2px solid black;
-            border-radius: 2rem;
-            width: 35rem;
-            height: 28rem;
-            margin: auto;
-    
-            span {
-                position: absolute;
-                user-select: none;
-                z-index: 2;
-                color: #451E5D;
-                font-size: 1rem;
-            }
-        
-            .bundle_old_price {
-                background-color: #9BCBEB;
-                top: 1rem;
-                left: 1rem;
-                padding: 0.5rem;
-                border-radius: 5vw;
-            }
-        
-            .bundle_savings {
-                background-color: #9BCBEB;
-                top: 1rem;
-                right: 2rem;
-                padding: 1rem;
-                border-radius: 50%;
-            }
-        
-            img {
-                width: 60%;
-                margin-top: 3rem;
-                transition: 0.2s;
-                user-select: none;
-            }
-        
-            img:hover {
-                transform: scale(1.03);
-            }
-        
-            p {
-                padding-left: 1rem;
-                color: #451E5D;
-                font-size: 1.5rem;
-            }
-        
-            button {
-                user-select: none;
-                background-color: #451E5D;
-                color: white;
-                font-family: Abril Fatface;
-                font-size: 1.5rem;
-                width: 50%;
-                padding: 0.5rem;
-                border-radius: 2rem;
-                transition: 0.2s;
-                cursor: pointer;
-            }
-        
-            button:hover {
-                border: 2px solid #451E5D;
-                background-color: white;
-                color: #451E5D;
-            }
-        }
+        bottom: 4.2rem;
     }
 
+    .bundle_card {
+        position: relative;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 2rem;
+        width: 35rem;
+        height: 27rem;
+        margin: auto;
+    }
+
+    .bundle_span {
+        position: absolute;
+        user-select: none;
+        z-index: 2;
+        color: #451E5D;
+        font-size: 1rem;
+    }
+
+    #bundle_old_price {
+        background-color: #9BCBEB;
+        top: 1rem;
+        left: 1rem;
+        padding: 0.5rem;
+        border-radius: 2rem;
+    }
+
+    #bundle_savings {
+        background-color: #9BCBEB;
+        top: 1rem;
+        right: 2rem;
+        padding: 1rem;
+        border-radius: 2rem;
+    }
+
+    .bundle_img {
+        width: 60%;
+        margin-top: 3rem;
+        transition: 0.2s;
+        user-select: none;
+    }
+
+    .bundle_title {
+        padding-left: 1rem;
+        color: #451E5D;
+        font-size: 1.2rem;
+    }
+
+    .buy_bundle {
+        user-select: none;
+        background-color: #451E5D;
+        color: white;
+        font-family: Abril Fatface;
+        font-size: 1.5rem;
+        width: 50%;
+        padding: 0.5rem;
+        border-radius: 2rem;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    .buy_bundle:hover {
+        border: 2px solid #451E5D;
+        background-color: white;
+        color: #451E5D;
+    }
+
+    /*-- Review Section (TODO) --*/
     .review_text {
         position: relative;
         text-align: center;
-        font-size: 2.75rem;
+        font-size: 2.25rem;
         color: #451E5D;
+        bottom: 4rem;
     }
     
     .reviews {
         text-align: center;
     }
 
+    /*-- Product Guide Section --*/
     .present_guide {
         position: relative;
         text-align: center;
-
-        * { 
-            color: #451E5D;
-        }
-
-        img {
-            user-select: none;
-            width: 35%;
-        }
-
-        p {
-            font-size: larger;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-
-        .p_h1 {
-            font-size: 2rem;
-        }
-
-        .email_input {
-            position: relative;
-            display: inline-flex;
-            height: 3rem;
-            
-            .email {
-                width: 65vw;
-                border-radius: 1vw 0vw 0vw 1vw;
-                border: 1px solid black;
-                padding-left: 2vw;
-                font-family: Inter;
-            }
-
-            .email::placeholder {
-                color: black;
-            }
-            
-            .join {
-                width: 20vw;
-                border: none;
-                border-radius: 0vw 1vw 1vw 0vw;
-                background-color: #451E5D;
-                color: white;
-                font-family: Inter;
-                cursor: pointer;
-            }
-        }
     }
 
+    .present_img {
+        user-select: none;
+        width: 35%;
+    }
+
+    .present_p {
+        font-size: larger;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .present_h1 {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        font-size: 2rem;
+    }
+
+    .email_input {
+        position: relative;
+        display: inline-flex;
+        height: 3rem;
+    }
+
+    .email {
+        width: 65vw;
+        border-radius: 1vw 0vw 0vw 1vw;
+        border: 1px solid black;
+        padding-left: 2vw;
+        font-family: Inter;
+    }
+
+    .email::placeholder {
+        color: black;
+    }
+    
+    .join {
+        width: 20vw;
+        border: none;
+        border-radius: 0vw 1vw 1vw 0vw;
+        background-color: #451E5D;
+        color: white;
+        font-family: Inter;
+        cursor: pointer;
+    }
+
+    /*-- Bottom Navigation Bar Section --*/
     .bottomnav {display: none;}
     
     .desktop_bottomnav {
@@ -875,69 +847,44 @@ body {
         height: 15rem;
         background-color: #451E5D;
         text-align: center;
+    }
 
-        .logo {
-            position: relative;
-            width: 40%;
-            margin-top: 2rem;
-        }
+    .desk_bottom_logo {
+        position: relative;
+        width: 40%;
+        margin-top: 2rem;
+    }
 
-        .separator {
-            margin-top: 1rem;
-            border: thin solid white;
-            margin-left: 2rem;
-            margin-right: 2rem;
-        }
+    .separator {
+        margin-top: 1rem;
+        border: thin solid white;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 
-        p {
-            display: inline-flex;
-            margin-top: 2rem;
-            margin-inline: 4rem;
-            color: white;
-            text-decoration: underline;
-        }
+    .desk_bottom_link {
+        display: inline-flex;
+        margin-top: 2rem;
+        margin-inline: 4rem;
+        color: white;
+        text-decoration: underline;
     }
 }
 
 /* SECTION USED FOR DESKTOP DISPLAYS */
 @media screen and (min-width: 1200px) {
-    .topnav {
-        height: 3.75rem;
 
-        .logo {
-            height: 60%;
-        }
-
-        .shop_topnav {
-            display: block;
-            position: absolute;
-            right: 0.625rem;
-            top: 0.75rem;
-            margin-right: 0.625rem;
-            border-radius: 0.3125rem;
-            border: none;
-            background-color: white;
-            color: #451E5D;
-            cursor: pointer;
-            font-family: Abril Fatface;
-            font-size: 20px;
-            padding: 5px;
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-    }
-
+    /*-- Hero Section --*/
     .hero_container {
         .hero {
-            height: 680px;
-            object-fit: cover;
+            height: 100vh;
         }
 
         .hero_text {
             position: relative;
             font-size: 45px;
             margin-left: 30px;
-            bottom: 180px;
+            bottom: 240px;
 
             #hero_break {
                 display: none;
@@ -946,7 +893,8 @@ body {
 
         .shop {
             font-size: 20px;
-            bottom: 160px;
+            border-radius: 12px;
+            bottom: 220px;
             margin-left: 50px;
             padding: 10px;
             padding-left: 70px;
@@ -1015,7 +963,7 @@ body {
                     p {
                         padding: 10px;
                         color: #451E5D;
-                        font-size: 16px;
+                        font-size: 1rem;
                     }
                 
                     button {
