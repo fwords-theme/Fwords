@@ -98,7 +98,7 @@ body {
 .product_card_wrapper {
     position: relative;
     width: inherit;
-    display: block;
+    display: none;
     animation-name: slide;
     animation-duration: 1s;
 }
@@ -190,6 +190,8 @@ body {
     color: #451E5D;
 }
 
+.desktop_gift_card_wrapper { display: none; }
+
 .gift_card_wrapper {
     position: relative;
     text-align: center;
@@ -261,10 +263,6 @@ body {
 
 .loop_dots:nth-child(3) {
     animation-delay: 6s;
-}
-
-.desktop_gift_card_wrapper {
-    display: none;
 }
 
 /*-- Bundle Product Card Section --*/
@@ -364,7 +362,7 @@ body {
 }
 
 /*-- Present Guide Section --*/
-.desktop_present_guide {display: none;}
+.desktop_present_guide { display: none; }
 
 .present_guide {
     position: relative;
@@ -439,9 +437,7 @@ body {
     text-decoration: underline;
 }
 
-.desktop_bottomnav {
-    display: none;
-}
+.desktop_bottomnav { display: none; }
 
 @keyframes fader {
     0% {
@@ -607,19 +603,13 @@ body {
         pointer-events: auto;
     }
 
-    .product_img:hover {
-        transform: scale(1.03);
-    }
-
     .product_title {
         padding: 0.25rem;
         color: #451E5D;
         font-size: 0.9rem;
     }
 
-    .dots_wrapper {
-        display: none;
-    }
+    .dots_wrapper { display: none; }
 
     /*-- Gift Section --*/
     .gift_text {
@@ -764,12 +754,6 @@ body {
         border-radius: 2rem;
         transition: 0.2s;
         cursor: pointer;
-    }
-
-    .buy_bundle:hover {
-        border: 2px solid #451E5D;
-        background-color: white;
-        color: #451E5D;
     }
 
     /*-- Review Section (TODO) --*/
@@ -953,10 +937,6 @@ body {
         pointer-events: auto;
     }
 
-    .product_img:hover {
-        transform: scale(1.03);
-    }
-
     .product_title {
         padding: 10px;
         color: #451E5D;
@@ -1013,18 +993,6 @@ body {
         user-select: none;
     }
 
-    .desktop_gift_card:nth-child(0) {
-        animation-delay: 0s;
-    }
-
-    .desktop_gift_card:nth-child(1) {
-        animation-delay: 3s;
-    }
-
-    .desktop_gift_card:nth-child(2) {
-        animation-delay: 6s;
-    }
-
     .loop_dots {
         margin-right: 15px;
     }
@@ -1073,10 +1041,6 @@ body {
         margin-top: 3rem;
         transition: 0.2s;
         user-select: none;
-    }
-
-    .bundle_img:hover {
-        transform: scale(1.03);
     }
 
     .bundle_title {
@@ -1164,7 +1128,7 @@ body {
         cursor: pointer;
     }
 
-    .present_guide {display: none;}
+    .present_guide { display: none; }
     
     .desktop_bottomnav {
         position: absolute;
@@ -1174,29 +1138,29 @@ body {
         height: fit-content;
         background-color: #451E5D;
         text-align: center;
+    }
 
-        .desk_bottom_logo {
-            position: relative;
-            width: 25%;
-            height: fit-content;
-            margin-top: 1rem;
-        }
+    .desk_bottom_logo {
+        position: relative;
+        width: 25%;
+        height: fit-content;
+        margin-top: 1rem;
+    }
 
-        .separator {
-            margin-top: 1rem;
-            border: 1px solid white;
-            margin-left: 2rem;
-            margin-right: 2rem;
-        }
+    .separator {
+        margin-top: 1rem;
+        border: 1px solid white;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 
-        .desk_bottom_link {
-            display: inline-flex;
-            font-weight: lighter;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            margin-inline: 12rem;
-            color: white;
-            text-decoration: underline;
-        }
+    .desk_bottom_link {
+        display: inline-flex;
+        font-weight: lighter;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-inline: 12rem;
+        color: white;
+        text-decoration: underline;
     }
 }

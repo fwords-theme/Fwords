@@ -4,6 +4,7 @@ body {
     font-family: Abril Fatface;
 }
 
+/*-- Top Navigation Bar Section --*/
 .topnav {
     background-color: #451E5D;
     width: 100%;
@@ -12,280 +13,281 @@ body {
     position: fixed;
     text-align: center;
     z-index: 10;
-
-    .logo {
-        user-select: none;
-        height: 35px;
-        padding-top: 10px;
-    }
-
-    .shop_topnav {
-        display: none;
-    }
 }
+
+.logo {
+    user-select: none;
+    height: 35px;
+    padding-top: 10px;
+}
+
+.shop_topnav {
+    display: none;
+}
+
+/*-- Product Infomation Section --*/
 
 .product_info {
     position: relative;
+    width: 100%;
     text-align: center;
     background-color: #451E5D;
     border-radius: 0 0 5vw 5vw;
-    margin-top: 55px;
-
-    .product_container {
-        width: 100%;
-        height: 80vw;
-
-        img {
-            position: relative;
-            width: 50%;
-            margin: auto;
-            margin-top: 10vw;
-            user-select: none;
-        }
-
-        #showcase {
-            width: 100%;
-        }
-    }
-
-    .product_img_selector {
-        position: relative;
-        display: inline-flex;
-        
-        .item {
-            width: 15vw;
-            height: 15vw;
-            border: 1px solid white;
-            border-radius: 3vw;
-            margin: 2vw;
-            transition: 0.2s;
-
-            img {
-                width: 60%;
-                margin-top: 1.5vw;
-                user-select: none;
-            }
-
-            #showcase {
-                width: 80%;
-            }
-        }
-
-        .item:hover {
-            transform: scale(1.1);
-            cursor: pointer;
-        }
-    }
-
-    .product_name {
-        font-family: Abril Fatface;
-        font-size: 10px;
-        margin-left: 15vw;
-        margin-right: 15vw;
-        color: white;
-    }
-
-    .buy_button {
-        margin: auto;
-    }
-
-    .product_description {
-        font-family: Rasa;
-        font-size: 18px;
-        text-align: left;
-        padding: 10vw;
-        color: white;
-
-        .more_description {
-            display: none;
-        }
-    }
-
-    .read_more {
-        background-color: #451E5D;
-        border: none;
-        text-decoration: underline;
-        text-align: center;
-        font-size: 7vw;
-        font-family: Abril Fatface;
-        color: white;
-        margin-bottom: 5vw;
-    }
-
-    .read_more:hover {
-        cursor: pointer;
-    }
+    margin-top: 5vw;
 }
 
+.product_container {
+    width: 100%;
+    height: 110vw;
+}
+
+#product {
+    position: relative;
+    width: 50%;
+    user-select: none;
+    margin-top: 15vw;
+}
+
+.product_img_selector {
+    position: relative;
+    display: inline-flex;
+    margin-top: 5vw;
+}
+
+.item {
+    width: 15vw;
+    height: 15vw;
+    border: 1px solid white;
+    border-radius: 3vw;
+    margin: 2vw;
+    transition: 0.2s;
+}
+
+.item_img {
+    width: 60%;
+    margin-top: 1.5vw;
+    user-select: none;
+}
+
+#showcase {
+    width: 80%;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.product_name {
+    font-size: 2vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    color: white;
+}
+
+.buy_button {
+    margin: auto;
+}
+
+.product_description {
+    font-family: Rasa;
+    font-size: 4vw;
+    text-align: left;
+    padding: 10vw;
+    color: white;
+}
+
+.more_description {
+    display: none;
+}
+
+.read_more {
+    background-color: #451E5D;
+    border: none;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 7vw;
+    font-family: Abril Fatface;
+    color: white;
+    margin-bottom: 5vw;
+}
+
+.read_more:hover {
+    cursor: pointer;
+}
+
+/*-- Bundle Product Card Section --*/
 .bundle_text {
     position: relative;
-    margin-top: 7vw;
     text-align: center;
     font-size: 7.5vw;
     color: #451E5D;
+    margin-top: 5vw;
 }
 
 .bundle_wrapper {
     position: relative;
     margin-top: 5vw;
-
-    .bundle_card {
-        position: relative;
-        text-align: center;
-        background-color: white;
-        border: 2px solid black;
-        border-radius: 5vw;
-        height: 95vw;
-        margin-left: 7vw;
-        margin-right: 7vw;
-
-        span {
-            position: absolute;
-            user-select: none;
-            z-index: 2;
-            color: #451E5D;
-        }
-    
-        .bundle_old_price {
-            background-color: #9BCBEB;
-            top: 3vw;
-            left: 2vw;
-            padding: 2vw;
-            border-radius: 5vw;
-        }
-    
-        .bundle_savings {
-            background-color: #9BCBEB;
-            top: 5vw;
-            right: 7vw;
-            padding: 3vw;
-            border-radius: 50%;
-        }
-    
-        img {
-            width: 85%;
-            margin-top: 20vw;
-            transition: 0.2s;
-            user-select: none;
-        }
-    
-        img:hover {
-            transform: scale(1.03);
-        }
-    
-        p {
-            padding-left: 1vw;
-            color: #451E5D;
-            font-size: 4vw;
-        }
-    
-        button {
-            user-select: none;
-            background-color: #451E5D;
-            color: white;
-            font-family: Abril Fatface;
-            font-size: 4vw;
-            width: 50%;
-            padding: 1.5vw;
-            border-radius: 3vw;
-            transition: 0.2s;
-            cursor: pointer;
-        }
-    
-        button:hover {
-            border: 2px solid #451E5D;
-            background-color: white;
-            color: #451E5D;
-        }
-    }
 }
 
+.bundle_card {
+    position: relative;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5vw;
+    height: 95vw;
+    margin-left: 7vw;
+    margin-right: 7vw;
+}
+
+.bundle_span {
+    position: absolute;
+    user-select: none;
+    z-index: 2;
+    color: #451E5D;
+}
+
+#bundle_old_price {
+    background-color: #9BCBEB;
+    top: 3vw;
+    left: 2vw;
+    padding: 2vw;
+    border-radius: 5vw;
+}
+
+#bundle_savings {
+    background-color: #9BCBEB;
+    top: 5vw;
+    right: 7vw;
+    padding: 3vw;
+    border-radius: 50%;
+}
+
+.bundle_img {
+    width: 85%;
+    margin-top: 20vw;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.bundle_img:hover {
+    transform: scale(1.03);
+}
+
+.bundle_title {
+    padding-left: 1vw;
+    color: #451E5D;
+    font-size: 4vw;
+}
+
+.buy_bundle {
+    user-select: none;
+    background-color: #451E5D;
+    color: white;
+    font-family: Abril Fatface;
+    font-size: 4vw;
+    width: 50%;
+    padding: 1.5vw;
+    border-radius: 3vw;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.buy_bundle:hover {
+    border: 2px solid #451E5D;
+    background-color: white;
+    color: #451E5D;
+}
+
+/*-- Gift Section --*/
 .gift_text {
     position: relative;
     text-align: center;
-    margin-top: 5vw;
     font-size: 7.5vw;
     color: #451E5D;
+    margin-top: 5vw;
 }
 
 .gift_card_wrapper {
     position: relative;
     text-align: center;
     background-color: #451E5D;
-    margin-top: 5vw;
     border-radius: 7vw;
     margin-left: 3vw;
     margin-right: 3vw;
+    margin-top: 5vw;
     height: 122vw;
+}
 
-    .gift_card {
-        position: absolute;
-        background-size: cover;
-        opacity: 0;
-        user-select: none;
-        animation-name: fader;
-        animation-duration: 9s;
-        animation-iteration-count: infinite;
+.gift_card {
+    position: absolute;
+    background-size: cover;
+    opacity: 0;
+    user-select: none;
+    animation-name: fader;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
 
-        p {
-            color: white;
-            font-size: 6.5vw;
-        }
+.gift_desc {
+    color: white;
+    font-size: 6.5vw;
+}
 
-        img {
-            border-radius: 5vw;
-            width: 85%;
-        }
-    }
+.gift_img {
+    border-radius: 5vw;
+    width: 85%;
+}
 
-    .gift_card:nth-child(0) {
-        animation-delay: 0s;
-    }
+.gift_card:nth-child(0) {
+    animation-delay: 0s;
+}
 
-    .gift_card:nth-child(1) {
-        animation-delay: 3s;
-    }
+.gift_card:nth-child(1) {
+    animation-delay: 3s;
+}
 
-    .gift_card:nth-child(2) {
-        animation-delay: 6s;
-    }
+.gift_card:nth-child(2) {
+    animation-delay: 6s;
 }
 
 .loop_dots_wrapper {
     position: relative;
     text-align: center;
     bottom: 10vw;
+}
 
-    .loop_dots {
-        display: inline-block;
-        height: 10px;
-        width: 10px;
-        margin-right: 1.5vw;
-        background-color: #451E5D;
-        border: 2px solid white;
-        border-radius: 50%;
-        animation-name: dots;
-        animation-duration: 9s;
-        animation-iteration-count: infinite;
-    }
+.loop_dots {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-right: 1.5vw;
+    background-color: #451E5D;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation-name: dots;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
 
-    .loop_dots:nth-child(1) {
-        animation-delay: 0s;
-    }
+.loop_dots:nth-child(1) {
+    animation-delay: 0s;
+}
 
-    .loop_dots:nth-child(2) {
-        animation-delay: 3s;
-    }
+.loop_dots:nth-child(2) {
+    animation-delay: 3s;
+}
 
-    .loop_dots:nth-child(3) {
-        animation-delay: 6s;
-    }
+.loop_dots:nth-child(3) {
+    animation-delay: 6s;
 }
 
 .desktop_gift_card_wrapper {
     display: none;
 }
 
+/*-- Review Section (TODO) --*/
 .review_text {
     position: relative;
     text-align: center;
@@ -298,11 +300,8 @@ body {
     text-align: center;
 }
 
-/*
-Left for review section
-*/
-
-.recommended_products {
+/*-- Recommended Product Carousel Section --*/
+.recommended_text {
     position: relative;
     text-align: center;
     color: #451E5D;
@@ -314,168 +313,152 @@ Left for review section
     position: relative;
     margin-top: 5vw;
     height: auto;
-    overflow-x: scroll;
-    scrollbar-width: none;
+    overflow-x: hidden;
+}
 
-    .recommended_card_container {
-        position: relative;
-        display: inline-flex;
-        width: 100%;
+.recommended_card_container {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+}
 
-        .recommended_card_wrapper {
-            position: relative;
-            width: 100%;
-            animation-name: slide;
-            animation-duration: 1s;
-    
-            .recommended_card {
-                position: relative;
-                text-align: center;
-                width: 80%;
-                height: 110vw;
-                margin: auto;
-                background-color: white;
-                border: 2px solid black;
-                border-radius: 5vw;
-    
-                span {
-                    position: absolute;
-                    user-select: none;
-                    z-index: 2;
-                    color: #451E5D;
-                }
-            
-                .old_price {
-                    background-color: #9BCBEB;
-                    top: 3vw;
-                    left: 2vw;
-                    padding: 2vw;
-                    border-radius: 5vw;
-                }
-            
-                .savings {
-                    background-color: #9BCBEB;
-                    top: 5vw;
-                    right: 7vw;
-                    padding: 2vw;
-                    border-radius: 50vw;
-                }
-            
-                img {
-                    width: 55%;
-                    margin-top: 11vw;
-                    transition: 0.2s;
-                    user-select: none;
-                }
-            
-                img:hover {
-                    transform: scale(1.03);
-                }
-            
-                p {
-                    padding-left: 1vw;
-                    color: #451E5D;
-                    font-size: 4vw;
-                }
-            
-                button {
-                    position: absolute;
-                    user-select: none;
-                    background-color: #451E5D;
-                    color: white;
-                    font-family: Abril Fatface;
-                    font-size: 4vw;
-                    width: 50vw;
-                    padding: 1.5vw;
-                    border-radius: 3vw;
-                    transition: 0.2s;
-                    cursor: pointer;
-                    bottom: 10vw;
-                    right: 15vw;
-                }
-            
-                button:hover {
-                    border: 2px solid #451E5D;
-                    background-color: white;
-                    color: #451E5D;
-                }
-            }
-        }
-    }
+.recommended_card_wrapper {
+    position: relative;
+    width: inherit;
+    display: none;
+    animation-name: slide;
+    animation-duration: 1s;
+}
+
+.recommended_card {
+    position: relative;
+    text-align: center;
+    width: 80%;
+    height: 110vw;
+    margin: auto;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5vw;
+}
+
+.recommended_span {
+    position: absolute;
+    user-select: none;
+    z-index: 2;
+    color: #451E5D;
+}
+
+#old_price {
+    background-color: #9BCBEB;
+    top: 3vw;
+    left: 2vw;
+    padding: 2vw;
+    border-radius: 5vw;
+}
+
+#savings {
+    background-color: #9BCBEB;
+    top: 5vw;
+    right: 7vw;
+    padding: 2vw;
+    border-radius: 50vw;
+}
+
+.recommended_img {
+    width: 55%;
+    margin-top: 11vw;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.recommended_img:hover {
+    transform: scale(1.03);
+}
+
+.recommended_title {
+    padding-left: 1vw;
+    color: #451E5D;
+    font-size: 4vw;
+}
+
+.recc_buy_button {
+    position: relative;
+    margin: auto;
 }
 
 .dots_wrapper {
     position: relative;
     text-align: center;
     margin-top: 5vw;
-
-    .dots {
-        display: inline-block;
-        height: 16px;
-        width: 16px;
-        margin-right: 1.5vw;
-        background-color: white;
-        border: 2px solid #451E5D;
-        border-radius: 50%;
-    }
-
-    .active {
-        background-color: #451E5D;
-    }
 }
+
+.dots {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 1.5vw;
+    background-color: white;
+    border: 2px solid #451E5D;
+    border-radius: 50%;
+}
+
+.active {
+    background-color: #451E5D;
+}
+
+/*-- Present Guide Section --*/
+.desktop_present_guide {display: none;}
 
 .present_guide {
     position: relative;
     text-align: center;
-
-    * {
-        color: #451E5D;
-    }
-
-    h1 {
-        margin: 7vw;
-    }
-
-    img {
-        user-select: none;
-        width: 70%;
-    }
-
-    p {
-        font-size: larger;
-        padding-left: 2vw;
-        padding-right: 2vw;
-    }
-
-    .email_input {
-        position: relative;
-        display: inline-flex;
-        height: 7vw;
-        
-        .email {
-            width: 65vw;
-            border-radius: 1vw 0vw 0vw 1vw;
-            border: 1px solid black;
-            padding-left: 2vw;
-            font-family: Inter;
-        }
-
-        .email::placeholder {
-            color: black;
-        }
-    
-        .join {
-            width: 20vw;
-            border: none;
-            border-radius: 0vw 1vw 1vw 0vw;
-            background-color: #451E5D;
-            color: white;
-            font-family: Inter;
-            cursor: pointer;
-        }
-    }
+    color: #451E5D;
 }
 
+.present_img {
+    user-select: none;
+    width: 70%;
+}
+
+.present_p {
+    font-size: larger;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.present_h1 {
+    font-size: 6vw;
+}
+
+.email_input {
+    position: relative;
+    display: inline-flex;
+    height: 7vw;
+}
+
+.email {
+    width: 65vw;
+    border-radius: 1vw 0vw 0vw 1vw;
+    border: 1px solid black;
+    padding-left: 2vw;
+    font-family: Inter;
+}
+
+.email::placeholder {
+    color: black;
+}
+
+.join {
+    width: 20vw;
+    border: none;
+    border-radius: 0vw 1vw 1vw 0vw;
+    background-color: #451E5D;
+    color: white;
+    font-family: Inter;
+    cursor: pointer;
+}
+
+/*-- Bottom Navigation Bar Section --*/
 .bottomnav {
     position: absolute;
     background-color: #451E5D;
@@ -483,21 +466,23 @@ Left for review section
     width: 100%;
     height: 70vw;
     text-align: center;
-
-    .logo {
-        user-select: none;
-        margin-top: 5vw;
-        margin-bottom: 5vw;
-        height: 18vw;
-    }
-
-    p {
-        margin-bottom: 5vw;
-        color: white;
-        font-family: Inter;
-        text-decoration: underline;
-    }
 }
+
+.bottom_logo {
+    user-select: none;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    height: 18vw;
+}
+
+.bottom_link {
+    margin-bottom: 5vw;
+    color: white;
+    font-family: Inter;
+    text-decoration: underline;
+}
+
+.desktop_bottomnav { display: none; }
 
 @keyframes fader {
     0% {
@@ -553,4 +538,707 @@ Left for review section
 @font-face { 
     font-family: 'Rasa';
     src: url('../fonts/R.woff') format('woff');
+}
+
+@media screen and (min-width: 768px) {
+
+    /*-- Top Navigation Bar Section --*/
+    .topnav {
+        height: 3.75rem;
+    }
+
+    .logo {
+        height: 60%;
+    }
+
+    .shop_topnav {
+        display: block;
+        position: absolute;
+        right: 0.625rem;
+        top: 0.75rem;
+        margin-right: 0.625rem;
+        border-radius: 0.3125rem;
+        border: none;
+        background-color: white;
+        color: #451E5D;
+        cursor: pointer;
+        font-family: Abril Fatface;
+        font-size: 1.25rem;
+        padding: 0.3125rem;
+        padding-left: 3.125rem;
+        padding-right: 3.125rem;
+    }
+
+    /*-- Product Infomation Section --*/
+    .product_info {
+        border-radius: 0 0 2rem 2rem;
+        margin-top: 3.4375rem;
+        height: 100vh;
+        display: inline-flex;
+        text-align: start;
+    }
+
+    .product_container {
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    #product {
+        width: 15rem;
+        height: 20rem;
+        margin-top: 1rem;
+    }
+
+    .item {
+        width: 5rem;
+        height: 5rem;
+        border: 1px solid white;
+        border-radius: 1rem;
+        margin: 0.75rem;
+        transition: 0.2s;
+    }
+    
+    .item_img {
+        width: 60%;
+        margin-top: 0.5rem;
+        user-select: none;
+    }
+
+    .product_name {
+        font-size: 1rem;
+        margin-top: 5rem;
+        margin-left: 0;
+        margin-right: 0;
+        color: white;
+    }
+    
+    .buy_button {
+        margin: 0;
+    }
+
+    .product_extra {
+        margin-right: 2rem;
+    }
+    
+    .product_description {
+        font-family: Rasa;
+        font-size: 1.5rem;
+        text-align: start;
+        padding: 0;
+        margin-top: 2.25rem;
+        color: white;
+    }
+
+    .more_description { display: block; }
+
+    #dots { display: none; }
+
+    .read_more { display: none; }
+
+    /*-- Bundle Product Card Section --*/
+    .bundle_text {
+        position: relative;
+        text-align: center;
+        font-size: 2.25rem;
+        color: #451E5D;
+    }
+    
+    .bundle_wrapper {
+        position: relative;
+    }
+
+    .bundle_card {
+        position: relative;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 2rem;
+        width: 35rem;
+        height: 27rem;
+        margin: auto;
+    }
+
+    .bundle_span {
+        position: absolute;
+        user-select: none;
+        z-index: 2;
+        color: #451E5D;
+        font-size: 1rem;
+    }
+
+    #bundle_old_price {
+        background-color: #9BCBEB;
+        top: 1rem;
+        left: 1rem;
+        padding: 0.5rem;
+        border-radius: 2rem;
+    }
+
+    #bundle_savings {
+        background-color: #9BCBEB;
+        top: 1rem;
+        right: 2rem;
+        padding: 1rem;
+        border-radius: 2rem;
+    }
+
+    .bundle_img {
+        width: 60%;
+        margin-top: 3rem;
+        transition: 0.2s;
+        user-select: none;
+    }
+
+    .bundle_title {
+        padding-left: 1rem;
+        color: #451E5D;
+        font-size: 1.2rem;
+    }
+
+    .buy_bundle {
+        user-select: none;
+        background-color: #451E5D;
+        color: white;
+        font-family: Abril Fatface;
+        font-size: 1.5rem;
+        width: 50%;
+        padding: 0.5rem;
+        border-radius: 2rem;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    .buy_bundle:hover {
+        border: 2px solid #451E5D;
+        background-color: white;
+        color: #451E5D;
+    }
+
+    /*-- Gift Section --*/
+    .gift_text {
+        font-size: 2rem;
+    }
+
+    .gift_card_wrapper { display: none; }
+
+    .desktop_gift_card_wrapper {
+        position: relative;
+        margin: auto;
+        display: block;
+        width: 80%;
+        height: 34.375rem;
+        background-color: #451E5D;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        margin-top: 2rem;
+    }
+
+    .desktop_gift_card {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        margin-left: 0.625rem;
+        opacity: 0;
+        animation-name: fader;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
+    }
+
+    .desk_gift_p {
+        position: relative;
+        color: white;
+        font-size: 1.5625rem;
+    }
+
+    #desk_gift_br {
+        display: none;
+    }
+
+    .desk_gift_img {
+        border-radius: 0.625rem;
+        width: 25.625rem;
+        transition: 0.2s;
+        user-select: none;
+    }
+
+    .desktop_gift_card:nth-child(0) {
+        animation-delay: 0s;
+    }
+
+    .desktop_gift_card:nth-child(1) {
+        animation-delay: 3s;
+    }
+
+    .desktop_gift_card:nth-child(2) {
+        animation-delay: 6s;
+    }
+
+    .loop_dots_wrapper {
+        text-align: center;
+        bottom: 2.5rem;
+    }
+
+    .loop_dots {
+        margin-right: 0.9375rem;
+    }
+
+    /*-- Review Section (TODO) --*/
+    .review_text {
+        position: relative;
+        text-align: center;
+        font-size: 2.25rem;
+        color: #451E5D;
+        bottom: 2rem;
+    }
+    
+    .reviews {
+        text-align: center;
+    }
+
+    /*-- Recommended Product Carousel Section --*/
+    .recommended_text {
+        position: relative;
+        text-align: center;
+        color: #451E5D;
+        margin-top: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .recommended_carousel {
+        position: relative;
+        margin-top: 2rem;
+        height: auto;
+        overflow-x: scroll;
+        scrollbar-width: none;
+    }
+
+    .recommended_card_container {
+        position: relative;
+        display: inline-flex;
+        width: 100%;
+    }
+
+    .recommended_card_wrapper {
+        position: relative;
+        width: 100%;
+        display: block;
+        animation-name: slide;
+        animation-duration: 1s;
+    }
+
+    .recommended_card {
+        width: 21rem;
+        height: 30rem;
+        border-radius: 2.5rem;
+        margin-left: 1.5625rem;
+        margin-right: 1.5625rem;
+    }
+
+    .recommended_span {
+        font-size: 0.9375rem;
+    }
+
+    #old_price {
+        top: 1.25rem;
+        left: 0.9375rem;
+        padding: 0.625rem;
+    }
+
+    #savings {
+        width: 2.375rem;
+        height: 2.375rem;
+        top: 1.25rem;
+        right: 1.875rem;
+        padding: 0.75rem;
+    }
+
+    .recommended_img {
+        width: 11.25rem;
+        margin-top: 3.75rem;
+        transition: 0.2s;
+        user-select: none;
+        pointer-events: auto;
+    }
+
+    .recommended_img:hover {
+        transform: scale(1.03);
+    }
+
+    .recommended_title {
+        padding: 0.25rem;
+        color: #451E5D;
+        font-size: 0.9rem;
+    }
+
+    .dots_wrapper { display: none; }
+
+    /*-- Product Guide Section --*/
+    .present_guide {
+        position: relative;
+        text-align: center;
+    }
+
+    .present_img {
+        user-select: none;
+        width: 35%;
+    }
+
+    .present_p {
+        font-size: larger;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .present_h1 {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        font-size: 2rem;
+    }
+
+    .email_input {
+        position: relative;
+        display: inline-flex;
+        height: 3rem;
+    }
+
+    .email {
+        width: 65vw;
+        border-radius: 1vw 0vw 0vw 1vw;
+        border: 1px solid black;
+        padding-left: 2vw;
+        font-family: Inter;
+    }
+
+    .email::placeholder {
+        color: black;
+    }
+    
+    .join {
+        width: 20vw;
+        border: none;
+        border-radius: 0vw 1vw 1vw 0vw;
+        background-color: #451E5D;
+        color: white;
+        font-family: Inter;
+        cursor: pointer;
+    }
+
+    /*-- Bottom Navigation Bar Section --*/
+    .bottomnav {display: none;}
+    
+    .desktop_bottomnav {
+        position: absolute;
+        margin-top: 2rem;
+        display: block;
+        width: 100%;
+        height: 15rem;
+        background-color: #451E5D;
+        text-align: center;
+    }
+
+    .desk_bottom_logo {
+        position: relative;
+        width: 40%;
+        margin-top: 2rem;
+    }
+
+    .separator {
+        margin-top: 1rem;
+        border: thin solid white;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .desk_bottom_link {
+        display: inline-flex;
+        margin-top: 2rem;
+        margin-inline: 4rem;
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    /*-- Product Infomation Section --*/
+    .product_info {
+        border-radius: 0 0 2rem 2rem;
+        margin-top: 3.4375rem;
+        height: 100vh;
+        display: inline-flex;
+        text-align: start;
+    }
+
+    .product_container {
+        width: 50%;
+        text-align: center;
+        margin-top: 5rem;
+        margin-left: 5rem;
+    }
+
+    #product {
+        width: 20rem;
+        height: 25rem;
+        margin-top: 1rem;
+    }
+
+    .item {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .product_extra {
+        width: auto;
+        height: fit-content;
+    }
+
+    /*-- Bundle Section --*/
+    .bundle_text {
+        position: relative;
+        text-align: center;
+        font-size: 2.25rem;
+        bottom: 3rem;
+    }
+    
+    .bundle_wrapper {
+        position: relative;
+        bottom: 6rem;
+    }
+
+    .bundle_card {
+        position: relative;
+        border-radius: 2rem;
+        width: 45rem;
+        height: 29rem;
+        margin: auto;
+    }
+
+    .bundle_span {
+        user-select: none;
+        font-size: 1rem;
+    }
+
+    #bundle_old_price {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.5rem;
+        border-radius: 2rem;
+    }
+
+    #bundle_savings {
+        top: 1rem;
+        right: 2rem;
+        padding: 1rem;
+        border-radius: 50%;
+    }
+
+    .bundle_img {
+        width: 50%;
+        margin-top: 3rem;
+        transition: 0.2s;
+        user-select: none;
+    }
+
+    .bundle_title {
+        padding-left: 1rem;
+        color: #451E5D;
+        font-size: 1.5rem;
+    }
+
+    /*-- Gift Card Section --*/
+    .gift_text {
+        margin-top: 5rem;
+        font-size: 2rem;
+        bottom: 8rem;
+    }
+
+    .desktop_gift_card_wrapper {
+        position: relative;
+        margin: auto;
+        display: block;
+        width: 85%;
+        height: 500px;
+        background-color: #451E5D;
+        border-radius: 20px;
+        overflow: hidden;
+        bottom: 6rem;
+    }
+
+    .desktop_gift_card {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        animation-name: fader;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
+    }
+
+    .desk_gift_p {
+        position: relative;
+        text-align: left;
+        width: fit-content;
+        color: white;
+        font-size: 30px;
+        margin-left: 20px;
+        float: left;
+        padding: 0;
+    }
+
+    #desk_gift_br {
+        display: block;
+    }
+
+    .desk_gift_img {
+        border-radius: 10px;
+        float: right;
+        width: 410px;
+        margin: 40px;
+        transition: 0.2s;
+        user-select: none;
+    }
+
+    .loop_dots_wrapper {
+        bottom: 8.25rem;
+    }
+
+    /*-- Review Section (TODO) --*/
+    .review_text {
+        position: relative;
+        text-align: center;
+        font-size: 2.25rem;
+        color: #451E5D;
+        bottom: 10rem;
+    }
+    
+    .reviews {
+        position: relative;
+        text-align: center;
+        bottom: 10rem;
+    }
+
+    /*-- Recommended Product Carousel Section --*/
+    .recommended_text {
+        position: relative;
+        text-align: center;
+        color: #451E5D;
+        margin-top: 2rem;
+        font-size: 2.5rem;
+        bottom: 10rem;
+    }
+
+    .recommended_carousel {
+        position: relative;
+        margin-top: 2rem;
+        bottom: 10rem;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        text-align: center;
+    }
+
+    .recommended_card_container {
+        width: auto;
+    }
+
+    .dots_wrapper { display: none; }
+
+    /*-- Present Section --*/
+    .desktop_present_guide {
+        position: relative;
+        display: inline-flex;
+        bottom: 5rem;
+    }
+
+    .desk_present_img {
+        width: 40%;
+        margin-left: 5rem;
+        text-align: center;
+    }
+
+    #desk_img {
+        width: 100%;
+    }
+
+    .desk_present_desc {
+        color: #451E5D;
+    }
+
+    .desk_present_h1 {
+        margin-top: 0;
+        font-size: 3rem;
+        padding-right: 2rem;
+        margin-bottom: 0;
+    }
+
+    .desk_present_h2 {
+        font-size: 1.5rem;
+    }
+
+    .desk_present_p {
+        font-size: 1.5rem;
+    }
+
+    .desktop_email_input {
+        position: relative;
+        display: inline-flex;
+        height: 3rem;
+    }
+
+    .desktop_email {
+        width: 40rem;
+        border-radius: 1vw 0vw 0vw 1vw;
+        border: 1px solid black;
+        padding-left: 2vw;
+        font-family: Inter;
+    }
+
+    .desktop_email::placeholder {
+        color: black;
+    }
+    
+    .desktop_join {
+        width: 10rem;
+        border: none;
+        border-radius: 0vw 1vw 1vw 0vw;
+        background-color: #451E5D;
+        color: white;
+        font-family: Inter;
+        cursor: pointer;
+    }
+
+    .present_guide { display: none; }
+    
+    .desktop_bottomnav {
+        position: absolute;
+        margin-top: 2rem;
+        display: block;
+        width: 100%;
+        height: fit-content;
+        background-color: #451E5D;
+        text-align: center;
+    }
+
+    .desk_bottom_logo {
+        position: relative;
+        width: 25%;
+        height: fit-content;
+        margin-top: 1rem;
+    }
+
+    .separator {
+        margin-top: 1rem;
+        border: 1px solid white;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .desk_bottom_link {
+        display: inline-flex;
+        font-weight: lighter;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-inline: 12rem;
+        color: white;
+        text-decoration: underline;
+    }
 }

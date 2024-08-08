@@ -1,8 +1,56 @@
-// Change main image from item selector
+// Change main image from item selector (mobile and desktop)
 function changeMainImage(n) {
-    const collectionImages = document.getElementsByClassName("item_img");
-    var mainImage = document.getElementById("product");
+    if (window.innerWidth < 768) {
+        const collectionImages = document.getElementsByClassName("item_img");
+        var mainImage = document.getElementById("product");
+        mainImage.src = collectionImages[n].src;
+        if (n == 2) {
+            mainImage.style.width = "70%"
+        }
+        else {
+            mainImage.style.width = "50%"
+        }
+    }
+    else if (window.innerWidth < 1200) {
+        const collectionImages = document.getElementsByClassName("item_img");
+        var mainImage = document.getElementById("product");
+        mainImage.src = collectionImages[n].src;
+        if (n == 2) {
+            mainImage.style.width = "20rem"
+        }
+        else {
+            mainImage.style.width = "15rem"
+        }
+    }
+    else {
+        const collectionImages = document.getElementsByClassName("item_img");
+        var mainImage = document.getElementById("product");
+        mainImage.src = collectionImages[n].src;
+        if (n == 2) {
+            mainImage.style.width = "25rem"
+        }
+        else {
+            mainImage.style.width = "20rem"
+        }
+    }
+}
+
+function changeMainImageBundle(n) {
+    //TODO
+}
+
+function changeMainImageDesk(n) {
+    const collectionImages = document.getElementsByClassName("desk_item_img");
+    var mainImage = document.getElementById("desk_product");
     mainImage.src = collectionImages[n].src;
+}
+
+// Add event listener for shop button click to scroll to products section
+document.getElementById('shopbtn_nav').addEventListener('click', scrollToProducts);
+
+function scrollToProducts() {
+    const nextDiv = document.getElementById('bundle_text');
+    nextDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // Read more button

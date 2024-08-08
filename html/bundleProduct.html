@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fwords - fwords card bundle</title>
     <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/bundle_product.css">
 </head>
 <body>
     <!--Top Nav bar with cart information-->
@@ -17,66 +18,33 @@
     <div class="product_info">
         <div class="product_container">
             <img id="product" src="../img/products/FWORDS_BUNDLE.png" alt="">
-        </div>
-        <div class="product_img_selector">
-            <span class="item">
-                <img class="item_img" src="../img/products/FWORDS_BUNDLE.png" alt="">
-            </span>
-        </div>
-        <div class="product_name">
-            <h1>card</h1>
-        </div>
-        <div class="add_to_cart">
-            <button class="cartbtn">add to cart - 
-                <span id="product_cost" class="product_cost">$8.00</span>
-            </button>
-        </div>
-        <section id="product_description" class="product_description">The card to let that special someone know how you feel :)
-            <span id="dots">...<br></span>
-            <span id="more_description" class="more_description"><br>A2 size, 4.25" x 5.5"<br><br>Printed on white cover paper<br>Includes a matching envelope<br>Blank inside<br>Printed in USA</span>
-        </section>
-        <button id="read_more" class="read_more" onclick="readMore()">read more</button>
-    </div>
-
-    <!--Recommended products section-->
-    <div class="recommended_products">recommended products</div>
-    <section class="recommended_carousel">
-        <div class="recommended_card_container">
-            <div class="recommended_card_wrapper">
-                <div class="recommended_card">
-                    <span class="old_price">was $11</span>
-                    <span class="savings">save<br>27%</span>
-                    <a href="../html/loveProduct.html"><img src="../img/products/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD.png" alt="" draggable="false"></a>
-                    <p>i love you so much my daal-ling card</p>
-                    <button>add - $8</button>
+            <section>
+                <div class="product_img_selector">
+                    <span class="item" onclick="changeMainImageBundle(0)">
+                        <img class="item_img" src="../img/products/FWORDS_BUNDLE.png" alt="">
+                    </span>
                 </div>
-            </div>
-            <div class="recommended_card_wrapper">
-                <div class="recommended_card">
-                    <span class="old_price">was $11</span>
-                    <span class="savings">save<br>27%</span>
-                    <a href="../html/moolaProduct.html"><img src="../img/products/LETS_MAKE_THIS_MOOLA_CARD.png" alt="" draggable="false"></a>
-                    <p>i love you so much my daal-ling card</p>
-                    <button>add - $8</button>
-                </div>
-            </div>
-            <div class="recommended_card_wrapper">
-                <div class="recommended_card">
-                    <span class="old_price">was $11</span>
-                    <span class="savings">save<br>27%</span>
-                    <a href="../html/bithdayProduct.html"><img src="../img/products/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD.png" alt="" draggable="false"></a>
-                    <p>i love you so much my daal-ling card</p>
-                    <button>add - $8</button>
-                </div>
-            </div>
+            </section>
         </div>
-    </section>
-
-    <!--Dot indicator of selected products only for mobile-->
-    <div class="dots_wrapper">
-        <span class="dots"></span>
-        <span class="dots"></span>
-        <span class="dots"></span>
+        <div class="product_extra">
+            <div class="product_name">
+                <h1>fwords card bundle</h1>
+            </div>
+            <div class="add_to_cart">
+                <button></button>
+                <!--WAITING FOR PRODUCT AVAILABILITY-->
+            </div>
+            <section id="product_description" class="product_description">The card to let that special someone know how you feel :)
+                <span id="dots">...<br></span>
+                <span id="more_description" class="more_description"><br>
+                    A2 size, 4.25" x 5.5"<br><br>
+                    Printed on white cover paper<br>
+                    Includes a matching envelope<br>
+                    Blank inside<br>
+                    Printed in USA</span>
+            </section>
+            <button id="read_more" class="read_more" onclick="readMore()">read more</button>
+        </div>
     </div>
 
     <!--Gift card text-->
@@ -85,36 +53,32 @@
     <!--Gift card wrapper used only for mobile-->
     <section class="gift_card_wrapper">
         <div class="gift_card">
-            <p>rekindling with your best friend</p>
-            <img src="../img/showcase/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD_SHOWCASE.png" alt="" draggable="false">
+            <p class="gift_desc">rekindling with your best friend</p>
+            <img class="gift_img" src="../img/showcase/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD_SHOWCASE.png" alt="" draggable="false">
         </div>
         <div class="gift_card">
-            <p>trying to “happy  birthday” back into someones life</p>
-            <img src="../img/showcase/LETS_MAKE_THIS_MOOLA_CARD_SHOWCASE.png" alt="" draggable="false">
+            <p class="gift_desc">trying to “happy  birthday” back into someones life</p>
+            <img class="gift_img" src="../img/showcase/LETS_MAKE_THIS_MOOLA_CARD_SHOWCASE.png" alt="" draggable="false">
         </div>
         <div class="gift_card">
-            <p>the friend who laughs at everything</p>
-            <img src="../img/showcase/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD_SHOWCASE.png" alt="" draggable="false">
+            <p class="gift_desc">the friend who laughs at everything</p>
+            <img class="gift_img" src="../img/showcase/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD_SHOWCASE.png" alt="" draggable="false">
         </div>
     </section>
 
     <!--Gift card wrapper used only for desktop-->
     <section class="desktop_gift_card_wrapper">
         <div class="desktop_gift_card">
-            <p>rekindling with your best friend</p>
-            <img src="../img/showcase/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD_SHOWCASE.png" alt="" draggable="false">
+            <p class="desk_gift_p">rekindling with your best friend</p>
+            <img class="desk_gift_img" src="../img/showcase/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD_SHOWCASE.png" alt="" draggable="false">
         </div>
         <div class="desktop_gift_card">
-            <p>trying to “happy  birthday” back into someones life</p>
-            <div class="img_right">
-                <img src="../img/showcase/LETS_MAKE_THIS_MOOLA_CARD_SHOWCASE.png" alt="" draggable="false">
-            </div>
+            <p class="desk_gift_p">trying to “happy birthday” back into<br id="desk_gift_br"> someones life</p>
+            <img class="desk_gift_img" src="../img/showcase/LETS_MAKE_THIS_MOOLA_CARD_SHOWCASE.png" alt="" draggable="false">
         </div>
         <div class="desktop_gift_card">
-            <p>the friend who laughs at everything</p>
-            <div class="img_right">
-                <img src="../img/showcase/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD_SHOWCASE.png" alt="" draggable="false">
-            </div>
+            <p class="desk_gift_p">the friend who laughs at everything</p>
+            <img class="desk_gift_img" src="../img/showcase/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD_SHOWCASE.png" alt="" draggable="false">
         </div>
     </section>
     <div class="loop_dots_wrapper">
@@ -127,26 +91,97 @@
     <div class="review_text">see what everyones<br>saying</div>
     <div class="reviews">left for future review section</div>
 
-    <!--Present guide section-->
+    <!--Recommended products section-->
+    <div class="recommended_text">recommended products</div>
+    <section class="recommended_carousel">
+        <div class="recommended_card_container">
+            <div class="recommended_card_wrapper">
+                <div class="recommended_card">
+                    <span class="recommended_span" id="old_price">was $11</span>
+                    <span class="recommended_span" id="savings">save<br>27%</span>
+                    <a href="../html/loveProduct.html"><img class="recommended_img" src="../img/products/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD.png" alt="" draggable="false"></a>
+                    <p class="recommended_title">i love you so much my daal-ling card</p>
+                    <div id='product-component-1722296110155' class="recc_buy_button"></div>
+                    <script src="../js/item1_shopify.js"></script>
+                    <style>@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap');</style>
+                </div>
+            </div>
+            <div class="recommended_card_wrapper">
+                <div class="recommended_card">
+                    <span class="recommended_span" id="old_price">was $11</span>
+                    <span class="recommended_span" id="savings">save<br>27%</span>
+                    <a href="../html/moolaProduct.html"><img class="recommended_img" src="../img/products/LETS_MAKE_THIS_MOOLA_CARD.png" alt="" draggable="false"></a>
+                    <p class="recommended_title">lets make this moola card</p>
+                    <div id='product-component-1722296236225' class="recc_buy_button"></div>
+                    <script src="../js/item2_shopify.js"></script>
+                    <style>@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap');</style>
+                </div>
+            </div>
+            <div class="recommended_card_wrapper">
+                <div class="recommended_card">
+                    <span class="recommended_span" id="old_price">was $11</span>
+                    <span class="recommended_span" id="savings">save<br>27%</span>
+                    <a href="../html/bithdayProduct.html"><img class="recommended_img" src="../img/products/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD.png" alt="" draggable="false"></a>
+                    <p class="recommended_title">you are naan stoppable! happy birthday! card</p>
+                    <div id='product-component-1722296298355' class="recc_buy_button"></div>
+                    <script src="../js/item3_shopify.js"></script>
+                    <style>@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap');</style>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Dot indicator of selected products only for mobile-->
+    <div class="dots_wrapper">
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+    </div>
+
+    <!--Present guide section used only for mobile-->
     <section class="present_guide">
-        <h1>did you buy another gift card instead of an actual present?</h1>
-        <img src="../img/showcase/EMAIL_CAPTURE_IMAGE.png" alt="" draggable="false">
-        <h2>its okay, we got you!</h2>
-        <p>leave your email below and well send you a gift guide for all of your loved ones.</p>
+        <p class="present_h1">did you buy another gift card instead of an actual present?</p>
+        <img class="present_img" src="../img/showcase/EMAIL_CAPTURE_IMAGE.png" alt="" draggable="false">
+        <p class="present_h1">its okay, we got you!</p>
+        <p class="present_p">leave your email below and well send you a gift guide for all of your loved ones.</p>
         <div class="email_input">
             <input id="email" class="email" type="text" placeholder="ENTER EMAIL HERE">
             <button id="join" class="join">JOIN US</button>
         </div>
     </section>
 
+    <!--Present guide section used only for desktop-->
+    <section class="desktop_present_guide">
+        <div class="desk_present_img"><img id="desk_img" src="../img/showcase/EMAIL_CAPTURE_IMAGE.png" alt="" draggable="false"></div>
+        <div class="desk_present_desc">
+            <p class="desk_present_h1">did you buy another gift card instead of an actual present?</p>
+            <p class="desk_present_h2">its okay, we got you!</p>
+            <p class="desk_present_p">leave your email below and well send you a gift guide for all of your loved ones.</p>
+            <div class="desktop_email_input">
+                <input class="desktop_email" type="text" placeholder="ENTER EMAIL HERE">
+                <button class="desktop_join">JOIN US</button>
+            </div>
+        </div>
+    </section>
+
     <!--Bottom nav bar with company links-->
     <div class="bottomnav">
-        <a href="../index.html"><img class="logo" src="../img/logo/fwords_logo_mono.png" alt="" draggable="false"></a>
-        <a ><p>Privacy Policy</p></a>
-        <a ><p>Return Policy</p></a>
-        <a ><p>Term & Conditions</p></a>
+        <a href="index.html"><img class="bottom_logo" src="../img/logo/fwords_logo_mono.png" alt="" draggable="false"></a>
+        <a ><p class="bottom_link">Privacy Policy</p></a>
+        <a ><p class="bottom_link">Return Policy</p></a>
+        <a ><p class="bottom_link">Term & Conditions</p></a>
     </div>
 
+    <!--Bottom nav bar for desktop only-->
+    <div class="desktop_bottomnav">
+        <a href="index.html"><img class="desk_bottom_logo" src="../img/logo/fwords_logo_mono.png" alt="" draggable="false"></a>
+        <div class="separator"></div>
+        <div class="links">
+            <a ><p class="desk_bottom_link">Privacy Policy</p></a>
+            <a ><p class="desk_bottom_link">Return Policy</p></a>
+            <a ><p class="desk_bottom_link">Term & Conditions</p></a>
+        </div>
+    </div>
     <script src="../js/product.js"></script>
 </body>
 </html>
