@@ -461,28 +461,36 @@ body {
 /*-- Bottom Navigation Bar Section --*/
 .bottomnav {
     position: absolute;
-    background-color: #451E5D;
     margin-top: 10vw;
+    display: block;
     width: 100%;
-    height: 70vw;
+    height: 50vw;
+    background-color: #451E5D;
     text-align: center;
 }
 
 .bottom_logo {
-    user-select: none;
+    position: relative;
+    width: 60%;
     margin-top: 5vw;
-    margin-bottom: 5vw;
-    height: 18vw;
 }
 
-.bottom_link {
-    margin-bottom: 5vw;
-    color: white;
-    font-family: Inter;
-    text-decoration: underline;
+.separator {
+    margin-top: 1rem;
+    border: thin solid white;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
-.desktop_bottomnav { display: none; }
+.links {
+    display: inline-block;
+    margin-top: 2vw;
+}
+
+.social {
+    width: 10%;
+    margin: 5vw;
+}
 
 @keyframes fader {
     0% {
@@ -925,37 +933,27 @@ body {
     }
 
     /*-- Bottom Navigation Bar Section --*/
-    .bottomnav {display: none;}
-    
-    .desktop_bottomnav {
+    .bottomnav {
         position: absolute;
         margin-top: 2rem;
         display: block;
         width: 100%;
-        height: 15rem;
+        height: 20rem;
         background-color: #451E5D;
         text-align: center;
     }
 
-    .desk_bottom_logo {
+    .bottom_logo {
         position: relative;
         width: 40%;
         margin-top: 2rem;
     }
 
-    .separator {
-        margin-top: 1rem;
-        border: thin solid white;
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
+    .links { margin-top: 2rem; }
 
-    .desk_bottom_link {
-        display: inline-flex;
-        margin-top: 2rem;
-        margin-inline: 4rem;
-        color: white;
-        text-decoration: underline;
+    .social {
+        width: 5%;
+        margin-top: 1rem;
     }
 }
 
@@ -1208,7 +1206,7 @@ body {
 
     .present_guide { display: none; }
     
-    .desktop_bottomnav {
+    .bottomnav {
         position: absolute;
         margin-top: 2rem;
         display: block;
@@ -1218,27 +1216,25 @@ body {
         text-align: center;
     }
 
-    .desk_bottom_logo {
+    .bottom_logo {
         position: relative;
         width: 25%;
         height: fit-content;
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 
     .separator {
-        margin-top: 1rem;
+        margin-top: 2rem;
         border: 1px solid white;
         margin-left: 2rem;
         margin-right: 2rem;
     }
 
-    .desk_bottom_link {
-        display: inline-flex;
-        font-weight: lighter;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        margin-inline: 12rem;
-        color: white;
-        text-decoration: underline;
+    .social {
+        transition: 0.2s;
+    }
+
+    .social:hover {
+        transform: scale(1.06);
     }
 }

@@ -47,11 +47,14 @@
           "padding-top": "12px",
           "padding-bottom": "12px",
           ":hover": {
-            "background-color": "#75339e"
+            "background-color": "white",
+            "border": "2px solid #451e5d",
+            "color": "#451e5d"
           },
           "background-color": "#451e5d",
+          "border": "2px solid #451e5d",
           ":focus": {
-            "background-color": "#75339e"
+            "display": "none",
           },
           "border-radius": "30px",
           "padding-left": "78px",
@@ -78,7 +81,7 @@
         "price": false
       },
       "text": {
-        "button": "Add - $8"
+        "button": "Add - $9"
       },
       "googleFonts": [
         "Playfair Display",

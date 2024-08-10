@@ -55,7 +55,7 @@
         "background-color": "white",
         "border": "2px solid white",
         ":focus": {
-          "background-color": "#451E5D"
+          "display": "none",
         },
         "border-radius": "15px",
         "padding-left": "28px",
@@ -82,7 +82,7 @@
       "price": false
     },
     "text": {
-      "button": "Add to cart - $8.00"
+      "button": "Add to cart - $9.00"
     },
     "googleFonts": [
       "Playfair Display",
