@@ -419,6 +419,7 @@ body {
 .policies {
     color: white;
     text-decoration: underline;
+    margin-top: 2rem;
 }
 
 .social_links {
@@ -822,6 +823,7 @@ body {
         display: inline-flex;
         margin-left: 7%;
         margin-right: 7%;
+        margin-top: 0;
     }
 
     .social_links { margin-top: 0; }
@@ -1041,6 +1043,8 @@ body {
     }
 
     .buy_button-bundle {
+        position: relative;
+        margin: auto;
         bottom: 0.5rem;
     }
 
