@@ -276,7 +276,7 @@ body {
     background-color: white;
     border: 2px solid black;
     border-radius: 5vw;
-    height: 95vw;
+    height: 100vw;
     margin-left: 7vw;
     margin-right: 7vw;
 }
@@ -317,23 +317,9 @@ body {
     font-size: 4vw;
 }
 
-.buy_bundle {
-    user-select: none;
-    background-color: #451E5D;
-    color: white;
-    font-family: Abril Fatface;
-    font-size: 4vw;
-    width: 50%;
-    padding: 1.5vw;
-    border-radius: 3vw;
-    transition: 0.2s;
-    cursor: pointer;
-}
-
-.buy_bundle:hover {
-    border: 2px solid #451E5D;
-    background-color: white;
-    color: #451E5D;
+.buy_button-bundle {
+    position: relative;
+    margin: auto;
 }
 
 /*-- Review Section (TODO) --*/
@@ -425,13 +411,23 @@ body {
     margin-right: 2rem;
 }
 
-.links {
+.company_links {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.policies {
+    color: white;
+    text-decoration: underline;
+}
+
+.social_links {
     display: inline-block;
     margin-top: 2vw;
 }
 
 .social {
-    width: 10%;
+    width: 5%;
     margin: 5vw;
 }
 
@@ -738,17 +734,10 @@ body {
         font-size: 1.2rem;
     }
 
-    .buy_bundle {
-        user-select: none;
-        background-color: #451E5D;
-        color: white;
-        font-family: Abril Fatface;
-        font-size: 1.5rem;
-        width: 50%;
-        padding: 0.5rem;
-        border-radius: 2rem;
-        transition: 0.2s;
-        cursor: pointer;
+    .buy_button-bundle {
+        position: relative;
+        margin: auto;
+        bottom: 0;
     }
 
     /*-- Review Section (TODO) --*/
@@ -829,10 +818,16 @@ body {
         margin-top: 2rem;
     }
 
-    .links { margin-top: 2rem; }
+    .policies {
+        display: inline-flex;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+    .social_links { margin-top: 0; }
 
     .social {
-        width: 5%;
+        width: 1.5rem;
         margin-top: 1rem;
     }
 }
@@ -1043,6 +1038,10 @@ body {
         padding-left: 1rem;
         color: #451E5D;
         font-size: 1.5rem;
+    }
+
+    .buy_button-bundle {
+        bottom: 0.5rem;
     }
 
     /*-- Review Section --*/

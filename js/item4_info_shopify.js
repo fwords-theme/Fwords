@@ -24,8 +24,8 @@
       });
       ShopifyBuy.UI.onReady(client).then(function (ui) {
         ui.createComponent('product', {
-          id: '8646557303077',
-          node: document.getElementById('product-component-1722296110155'),
+          id: '9561411092773',
+          node: document.getElementById('product-component-1723268139429'),
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
     "product": {
@@ -42,23 +42,24 @@
           "font-weight": "normal"
         },
         "button": {
+          "color": "#451E5D",
           "font-family": "Abril Fatface",
-          "font-size": "16px",
+          "font-size": "1.5rem",
           "padding-top": "12px",
           "padding-bottom": "12px",
           ":hover": {
-            "background-color": "white",
-            "border": "2px solid #451e5d",
-            "color": "#451e5d"
+            "background-color": "#451E5D",
+            "border": "2px solid white",
+            "color": "white"
           },
-          "background-color": "#451e5d",
-          "border": "2px solid #451e5d",
+          "background-color": "white",
+          "border": "2px solid white",
           ":focus": {
             "display": "none",
           },
-          "border-radius": "30px",
-          "padding-left": "78px",
-          "padding-right": "78px"
+          "border-radius": "15px",
+          "padding-left": "28px",
+          "padding-right": "28px"
         },
         "quantityInput": {
           "font-size": "16px",
@@ -81,9 +82,7 @@
         "price": false
       },
       "text": {
-        "button": "Add - $9",
-        "outOfStock": "Sold Out",
-        "unavailable": "Unavailable"
+        "button": "Add to cart - $21"
       },
       "googleFonts": [
         "Playfair Display",
@@ -126,9 +125,9 @@
           ":focus": {
             "background-color": "#75339e"
           },
-          "border-radius": "30px",
-          "padding-left": "78px",
-          "padding-right": "78px"
+          "border-radius": "13px",
+          "padding-left": "65px",
+          "padding-right": "65px"
         },
         "quantityInput": {
           "font-size": "16px",
@@ -183,7 +182,7 @@
           ":focus": {
             "background-color": "#75339e"
           },
-          "border-radius": "30px"
+          "border-radius": "13px"
         },
         "title": {
           "color": "#451e5d"
@@ -305,4 +304,4 @@
       });
     }
   })();
-/*]]>*/
+  /*]]>*/
