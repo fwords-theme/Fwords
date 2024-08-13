@@ -756,6 +756,11 @@ body {
         margin-top: 2rem;
     }
 
+    .desk_bundle_name {
+        position: relative;
+        color: #451E5D;
+    }
+
     .desk_buy_button-bundle {
         position: relative;
         margin: auto;
@@ -1051,6 +1056,11 @@ body {
 
     .desk_bundle_img:hover {
         transform: scale(1.03);
+    }
+
+    .desk_bundle_name {
+        position: relative;
+        color: #451E5D;
     }
 
     .desk_buy_button-bundle {
