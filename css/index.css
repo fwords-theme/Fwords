@@ -322,6 +322,10 @@ body {
     margin: auto;
 }
 
+.desktop_bundle_container {
+    display: none;
+}
+
 /*-- Review Section (TODO) --*/
 .review_text {
     position: relative;
