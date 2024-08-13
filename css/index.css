@@ -1019,6 +1019,14 @@ body {
         font-size: 2.5rem;
     }
 
+    .desk_right_wrapper {
+        position: relative;
+        width: 60%;
+        margin-top: 1rem;
+        text-align: center;
+        user-select: none;
+    }
+
     #desk_old_price {
         top: 0;
         left: 2rem;
