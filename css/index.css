@@ -724,6 +724,7 @@ body {
         margin-top: 1rem;
         text-align: center;
         user-select: none;
+        color: #451E5D;
     }
 
     .desk_bundle_span {
@@ -1050,6 +1051,12 @@ body {
 
     .desk_bundle_img:hover {
         transform: scale(1.03);
+    }
+
+    .desk_buy_button-bundle {
+        position: relative;
+        margin: auto;
+        bottom: 1rem;
     }
 
     /*-- Review Section --*/
