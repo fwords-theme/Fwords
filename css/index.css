@@ -258,16 +258,15 @@ body {
 }
 
 /*-- Bundle Product Card Section --*/
+.bundle_wrapper {
+    position: relative;
+}
+
 .bundle_text {
     position: relative;
     text-align: center;
     font-size: 7.5vw;
     color: #451E5D;
-}
-
-.bundle_wrapper {
-    position: relative;
-    margin-top: 5vw;
 }
 
 .bundle_card {
@@ -279,6 +278,7 @@ body {
     height: 100vw;
     margin-left: 7vw;
     margin-right: 7vw;
+    margin-top: 5vw;
 }
 
 .bundle_span {
