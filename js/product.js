@@ -35,10 +35,6 @@ function changeMainImage(n) {
     }
 }
 
-function changeMainImageBundle(n) {
-    //TODO
-}
-
 function changeMainImageDesk(n) {
     const collectionImages = document.getElementsByClassName("desk_item_img");
     var mainImage = document.getElementById("desk_product");
@@ -46,12 +42,10 @@ function changeMainImageDesk(n) {
 }
 
 // Add event listener for shop button click to scroll to products section
-document.getElementById('shopbtn_nav').addEventListener('click', scrollToProducts);
-
-function scrollToProducts() {
+document.getElementById('shopbtn_nav').addEventListener('click', function () {
     const nextDiv = document.getElementById('bundle_text');
     nextDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
+});
 
 // Read more button
 function readMore() {

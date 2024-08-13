@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fwords - fwords card bundle</title>
     <link rel="stylesheet" href="../css/product.css">
-    <link rel="stylesheet" href="../css/bundle_product.css">
 </head>
 <body>
     <!--Top Nav bar with cart information-->
@@ -18,10 +17,23 @@
     <div class="product_info">
         <div class="product_container">
             <img id="product" src="../img/products/FWORDS_BUNDLE.png" alt="">
+            <script src="../js/bundle_product.js"></script>
             <section>
                 <div class="product_img_selector">
                     <span class="item" onclick="changeMainImageBundle(0)">
-                        <img class="item_img" src="../img/products/FWORDS_BUNDLE.png" alt="">
+                        <img class="item_img" id="bundle" src="../img/products/FWORDS_BUNDLE.png" alt="">
+                    </span>
+                    <span class="item" onclick="changeMainImageBundle(1)">
+                        <img class="item_img" src="../img/products/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD.png" alt="">
+                    </span>
+                    <span class="item" onclick="changeMainImageBundle(2)">
+                        <img class="item_img" src="../img/products/LETS_MAKE_THIS_MOOLA_CARD.png" alt="">
+                    </span>
+                    <span class="item" onclick="changeMainImageBundle(3)">
+                        <img class="item_img" src="../img/products/YOU_ARE_NAAN_STOPPABLE_HAPPY_BIRTHDAY_CARD.png" alt="">
+                    </span>
+                    <span class="item" onclick="changeMainImageBundle(4)">
+                        <img class="item_img" id="showcase" src="../img/showcase/FWORDS_CARD_BUNDLE_SHOWCASE.png" alt="">
                     </span>
                 </div>
             </section>
@@ -169,7 +181,12 @@
     <div class="bottomnav">
         <a href="index.html"><img class="bottom_logo" src="../img/logo/fwords_logo_mono.png" alt="" draggable="false"></a>
         <div class="separator"></div>
-        <div class="links">
+        <div class="company_links">
+            <a href=""><p class="policies">Privacy Policy</p></a>
+            <a href=""><p class="policies">Return Policy</p></a>
+            <a href=""><p class="policies">Terms And Conditions</p></a>
+        </div>
+        <div class="social_links">
             <a href="https://www.instagram.com/fwords.xyz/"><img class="social" src="../img/icons/instagam_icon.webp" alt=""></a>
             <a href="https://www.tiktok.com/@fwords.xyz"><img class="social" src="../img/icons/tiktok_icon.png" alt=""></a>
         </div>

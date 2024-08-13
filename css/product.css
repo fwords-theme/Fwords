@@ -26,7 +26,6 @@ body {
 }
 
 /*-- Product Infomation Section --*/
-
 .product_info {
     position: relative;
     width: 100%;
@@ -38,12 +37,13 @@ body {
 
 .product_container {
     width: 100%;
-    height: 110vw;
+    height: auto;
 }
 
 #product {
     position: relative;
     width: 50%;
+    height: fit-content;
     user-select: none;
     margin-top: 15vw;
 }
@@ -55,11 +55,11 @@ body {
 }
 
 .item {
-    width: 15vw;
-    height: 15vw;
+    width: 13vw;
+    height: 13vw;
     border: 1px solid white;
     border-radius: 3vw;
-    margin: 2vw;
+    margin: 1vw;
     transition: 0.2s;
 }
 
@@ -69,13 +69,14 @@ body {
     user-select: none;
 }
 
-#showcase {
-    width: 80%;
+#bundle {
+    width: 100%;
+    margin-top: 2.5vw;
+    user-select: none;
 }
 
-.item:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+#showcase {
+    width: 80%;
 }
 
 .product_name {
@@ -123,6 +124,7 @@ body {
     font-size: 7.5vw;
     color: #451E5D;
     margin-top: 5vw;
+    bottom: 3vw;
 }
 
 .bundle_wrapper {
@@ -136,7 +138,7 @@ body {
     background-color: white;
     border: 2px solid black;
     border-radius: 5vw;
-    height: 95vw;
+    height: 100vw;
     margin-left: 7vw;
     margin-right: 7vw;
 }
@@ -181,24 +183,13 @@ body {
     font-size: 4vw;
 }
 
-.buy_bundle {
-    user-select: none;
-    background-color: #451E5D;
-    color: white;
-    font-family: Abril Fatface;
-    font-size: 4vw;
-    width: 50%;
-    padding: 1.5vw;
-    border-radius: 3vw;
-    transition: 0.2s;
-    cursor: pointer;
+.buy_button-bundle {
+    position: relative;
+    margin: auto;
+    bottom: 5vw;
 }
 
-.buy_bundle:hover {
-    border: 2px solid #451E5D;
-    background-color: white;
-    color: #451E5D;
-}
+.desktop_bundle_container { display: none; }
 
 /*-- Gift Section --*/
 .gift_text {
@@ -464,7 +455,7 @@ body {
     margin-top: 10vw;
     display: block;
     width: 100%;
-    height: 50vw;
+    height: fit-content;
     background-color: #451E5D;
     text-align: center;
 }
@@ -482,13 +473,24 @@ body {
     margin-right: 2rem;
 }
 
-.links {
+.company_links {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.policies {
+    color: white;
+    text-decoration: underline;
+    margin-top: 2rem;
+}
+
+.social_links {
     display: inline-block;
     margin-top: 2vw;
 }
 
 .social {
-    width: 10%;
+    width: 5%;
     margin: 5vw;
 }
 
@@ -614,6 +616,10 @@ body {
         user-select: none;
     }
 
+    #bundle {
+        margin-top: 1rem;
+    }
+
     .product_name {
         font-size: 1rem;
         margin-top: 5rem;
@@ -646,81 +652,85 @@ body {
     .read_more { display: none; }
 
     /*-- Bundle Product Card Section --*/
-    .bundle_text {
-        position: relative;
-        text-align: center;
-        font-size: 2.25rem;
-        color: #451E5D;
-    }
+    .bundle_text { display: none; }
     
-    .bundle_wrapper {
-        position: relative;
-    }
+    .bundle_wrapper { display: none; }
 
-    .bundle_card {
+    .desktop_bundle_container {
         position: relative;
         background-color: white;
-        border: 2px solid black;
-        border-radius: 2rem;
-        width: 35rem;
-        height: 27rem;
+        width: 85%;
         margin: auto;
+        margin-top: 3rem;
+        border: 2px solid black;
+        border-radius: 2.5rem;
+        display: block;
     }
 
-    .bundle_span {
-        position: absolute;
-        user-select: none;
-        z-index: 2;
+    .desk_inner_container {
+        position: relative;
+        display: inline-flex;
+    }
+
+    .desk_left_wrapper {
+        position: relative;
+        width: 60%;
+        height: 100%;
         color: #451E5D;
-        font-size: 1rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        font-family: Rasa;
+        font-size: larger;
+        font-weight: bold;
     }
 
-    #bundle_old_price {
+    .desk_bundle_title {
+        font-size: 2rem;
+        font-weight: lighter;
+        font-family: Abril Fatface;
+    }
+
+    .desk_right_wrapper {
+        position: relative;
+        width: 80%;
+        margin-top: 1rem;
+        text-align: center;
+        user-select: none;
+    }
+
+    .desk_bundle_span {
+        position: absolute;
         background-color: #9BCBEB;
-        top: 1rem;
+        color: #451E5D;
+        z-index: 2;
+    }
+
+    #desk_old_price {
+        top: 0;
         left: 1rem;
         padding: 0.5rem;
         border-radius: 2rem;
     }
 
-    #bundle_savings {
-        background-color: #9BCBEB;
+    #desk_savings {
         top: 1rem;
         right: 2rem;
-        padding: 1rem;
+        width: 3rem;
+        height: 3rem;
         border-radius: 2rem;
-    }
-
-    .bundle_img {
-        width: 60%;
-        margin-top: 3rem;
-        transition: 0.2s;
-        user-select: none;
-    }
-
-    .bundle_title {
-        padding-left: 1rem;
-        color: #451E5D;
-        font-size: 1.2rem;
-    }
-
-    .buy_bundle {
-        user-select: none;
-        background-color: #451E5D;
-        color: white;
-        font-family: Abril Fatface;
-        font-size: 1.5rem;
-        width: 50%;
         padding: 0.5rem;
-        border-radius: 2rem;
-        transition: 0.2s;
-        cursor: pointer;
     }
 
-    .buy_bundle:hover {
-        border: 2px solid #451E5D;
-        background-color: white;
-        color: #451E5D;
+    .desk_bundle_img {
+        position: relative;
+        width: 85%;
+        margin-top: 2rem;
+    }
+
+    .desk_buy_button-bundle {
+        position: relative;
+        margin: auto;
+        bottom: 1rem;
     }
 
     /*-- Gift Section --*/
@@ -934,11 +944,8 @@ body {
 
     /*-- Bottom Navigation Bar Section --*/
     .bottomnav {
-        position: absolute;
-        margin-top: 2rem;
-        display: block;
         width: 100%;
-        height: 20rem;
+        height: fit-content;
         background-color: #451E5D;
         text-align: center;
     }
@@ -949,10 +956,17 @@ body {
         margin-top: 2rem;
     }
 
-    .links { margin-top: 2rem; }
+    .policies {
+        display: inline-flex;
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 1rem;
+    }
+
+    .social_links { margin-top: 0; }
 
     .social {
-        width: 5%;
+        width: 1.5rem;
         margin-top: 1rem;
     }
 }
@@ -986,69 +1000,60 @@ body {
         height: 5rem;
     }
 
+    
+    .item:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
     .product_extra {
         width: auto;
         height: fit-content;
     }
 
     /*-- Bundle Section --*/
-    .bundle_text {
-        position: relative;
-        text-align: center;
-        font-size: 2.25rem;
-        bottom: 3rem;
-    }
-    
-    .bundle_wrapper {
-        position: relative;
-        bottom: 6rem;
+    .desk_left_wrapper {
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+        font-family: Rasa;
+        font-size: 1.5rem;
+        width: 80%;
     }
 
-    .bundle_card {
-        position: relative;
-        border-radius: 2rem;
-        width: 45rem;
-        height: 29rem;
-        margin: auto;
+    .desk_bundle_title {
+        font-size: 2.5rem;
     }
 
-    .bundle_span {
-        user-select: none;
-        font-size: 1rem;
-    }
-
-    #bundle_old_price {
-        top: 1rem;
-        left: 1rem;
+    #desk_old_price {
+        top: 0;
+        left: 2rem;
         padding: 0.5rem;
         border-radius: 2rem;
     }
 
-    #bundle_savings {
+    #desk_savings {
         top: 1rem;
-        right: 2rem;
-        padding: 1rem;
-        border-radius: 50%;
+        right: 3rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 2rem;
+        padding: 0.5rem;
     }
 
-    .bundle_img {
-        width: 50%;
-        margin-top: 3rem;
+    .desk_bundle_img {
+        width: 65%;
         transition: 0.2s;
-        user-select: none;
     }
 
-    .bundle_title {
-        padding-left: 1rem;
-        color: #451E5D;
-        font-size: 1.5rem;
+    .desk_bundle_img:hover {
+        transform: scale(1.03);
     }
 
     /*-- Gift Card Section --*/
     .gift_text {
         margin-top: 5rem;
         font-size: 2rem;
-        bottom: 8rem;
+        bottom: 4rem;
     }
 
     .desktop_gift_card_wrapper {
@@ -1060,7 +1065,7 @@ body {
         background-color: #451E5D;
         border-radius: 20px;
         overflow: hidden;
-        bottom: 6rem;
+        bottom: 2rem;
     }
 
     .desktop_gift_card {
@@ -1106,13 +1111,13 @@ body {
         text-align: center;
         font-size: 2.25rem;
         color: #451E5D;
-        bottom: 10rem;
+        bottom: 6rem;
     }
     
     .reviews {
         position: relative;
         text-align: center;
-        bottom: 10rem;
+        bottom: 6rem;
     }
 
     /*-- Recommended Product Carousel Section --*/
@@ -1122,13 +1127,13 @@ body {
         color: #451E5D;
         margin-top: 2rem;
         font-size: 2.5rem;
-        bottom: 10rem;
+        bottom: 6rem;
     }
 
     .recommended_carousel {
         position: relative;
         margin-top: 2rem;
-        bottom: 10rem;
+        bottom: 6rem;
         overflow-x: scroll;
         scrollbar-width: none;
         text-align: center;
@@ -1144,7 +1149,7 @@ body {
     .desktop_present_guide {
         position: relative;
         display: inline-flex;
-        bottom: 5rem;
+        bottom: 2rem;
     }
 
     .desk_present_img {

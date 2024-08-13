@@ -675,70 +675,86 @@ body {
     }
 
     /*-- Bundle Product Card Section --*/
-    .bundle_text {
-        position: relative;
-        text-align: center;
-        font-size: 2.25rem;
-        bottom: 4.4rem;
-        color: #451E5D;
-    }
+    .bundle_text { display: none; }
     
-    .bundle_wrapper {
-        position: relative;
-        bottom: 4.2rem;
-    }
+    .bundle_wrapper { display: none; }
 
-    .bundle_card {
+    .desktop_bundle_container {
         position: relative;
         background-color: white;
-        border: 2px solid black;
-        border-radius: 2rem;
-        width: 35rem;
-        height: 27rem;
+        width: 85%;
         margin: auto;
+        margin-top: 3rem;
+        border: 2px solid black;
+        border-radius: 2.5rem;
+        display: block;
+        bottom: 4rem;
     }
 
-    .bundle_span {
-        position: absolute;
-        user-select: none;
-        z-index: 2;
+    .desk_inner_container {
+        position: relative;
+        display: inline-flex;
+    }
+
+    .desk_left_wrapper {
+        position: relative;
+        width: 60%;
+        height: 100%;
         color: #451E5D;
-        font-size: 1rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        font-family: Rasa;
+        font-size: larger;
+        font-weight: bold;
     }
 
-    #bundle_old_price {
+    .desk_bundle_title {
+        font-size: 2rem;
+        font-weight: lighter;
+        font-family: Abril Fatface;
+    }
+
+    .desk_right_wrapper {
+        position: relative;
+        width: 80%;
+        margin-top: 1rem;
+        text-align: center;
+        user-select: none;
+    }
+
+    .desk_bundle_span {
+        position: absolute;
         background-color: #9BCBEB;
-        top: 1rem;
+        color: #451E5D;
+        z-index: 2;
+    }
+
+    #desk_old_price {
+        top: 0;
         left: 1rem;
         padding: 0.5rem;
         border-radius: 2rem;
     }
 
-    #bundle_savings {
-        background-color: #9BCBEB;
+    #desk_savings {
         top: 1rem;
         right: 2rem;
-        padding: 1rem;
+        width: 3rem;
+        height: 3rem;
         border-radius: 2rem;
+        padding: 0.5rem;
     }
 
-    .bundle_img {
-        width: 60%;
-        margin-top: 3rem;
-        transition: 0.2s;
-        user-select: none;
+    .desk_bundle_img {
+        position: relative;
+        width: 85%;
+        margin-top: 2rem;
     }
 
-    .bundle_title {
-        padding-left: 1rem;
-        color: #451E5D;
-        font-size: 1.2rem;
-    }
-
-    .buy_button-bundle {
+    .desk_buy_button-bundle {
         position: relative;
         margin: auto;
-        bottom: 0;
+        bottom: 1rem;
     }
 
     /*-- Review Section (TODO) --*/
@@ -823,7 +839,7 @@ body {
         display: inline-flex;
         margin-left: 7%;
         margin-right: 7%;
-        margin-top: 0;
+        margin-top: 1rem;
     }
 
     .social_links { margin-top: 0; }
@@ -987,65 +1003,41 @@ body {
     }
 
     /*-- Bundle Section --*/
-    .bundle_text {
-        position: relative;
-        text-align: center;
-        font-size: 2.25rem;
-    }
-    
-    .bundle_wrapper {
-        position: relative;
-        bottom: 7rem;
+    .desk_left_wrapper {
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+        font-family: Rasa;
+        font-size: 1.5rem;
+        width: 80%;
     }
 
-    .bundle_card {
-        position: relative;
-        border-radius: 2rem;
-        width: 45rem;
-        height: 29rem;
-        margin: auto;
+    .desk_bundle_title {
+        font-size: 2.5rem;
     }
 
-    .bundle_span {
-        user-select: none;
-        font-size: 1rem;
-    }
-
-    #bundle_old_price {
-        top: 1rem;
-        left: 1rem;
+    #desk_old_price {
+        top: 0;
+        left: 2rem;
         padding: 0.5rem;
         border-radius: 2rem;
     }
 
-    #bundle_savings {
+    #desk_savings {
         top: 1rem;
-        right: 2rem;
-        padding: 1rem;
-        border-radius: 50%;
+        right: 3rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 2rem;
+        padding: 0.5rem;
     }
 
-    .bundle_img {
-        width: 50%;
-        margin-top: 3rem;
+    .desk_bundle_img {
+        width: 65%;
         transition: 0.2s;
-        user-select: none;
     }
 
-    .bundle_img:hover {
+    .desk_bundle_img:hover {
         transform: scale(1.03);
-    }
-
-    .bundle_title {
-        padding-left: 1rem;
-        color: #451E5D;
-        font-size: 1.5rem;
-    }
-
-    .buy_button-bundle {
-        position: relative;
-        margin: auto;
-        bottom: 0.5rem;
     }
 
     /*-- Review Section --*/
@@ -1053,21 +1045,20 @@ body {
         position: relative;
         text-align: center;
         font-size: 2.75rem;
-        bottom: 10rem;
+        bottom: 6rem;
         color: #451E5D;
     }
     
     .reviews {
         position: relative;
         text-align: center;
-        bottom: 10rem;
+        bottom: 6rem;
     }
 
     /*-- Present Section --*/
     .desktop_present_guide {
         position: relative;
         display: inline-flex;
-        bottom: 2rem;
     }
 
     .desk_present_img {
