@@ -138,7 +138,7 @@ body {
     background-color: white;
     border: 2px solid black;
     border-radius: 5vw;
-    height: 100vw;
+    height: fit-content;
     margin-left: 7vw;
     margin-right: 7vw;
 }
@@ -173,10 +173,6 @@ body {
     user-select: none;
 }
 
-.bundle_img:hover {
-    transform: scale(1.03);
-}
-
 .bundle_title {
     padding-left: 1vw;
     color: #451E5D;
@@ -186,7 +182,7 @@ body {
 .buy_button-bundle {
     position: relative;
     margin: auto;
-    bottom: 5vw;
+    bottom: 4vw;
 }
 
 .desktop_bundle_container { display: none; }
@@ -325,7 +321,7 @@ body {
     position: relative;
     text-align: center;
     width: 80%;
-    height: 110vw;
+    height: fit-content;
     margin: auto;
     background-color: white;
     border: 2px solid black;
@@ -362,18 +358,21 @@ body {
     user-select: none;
 }
 
-.recommended_img:hover {
-    transform: scale(1.03);
-}
-
 .recommended_title {
     padding-left: 1vw;
     color: #451E5D;
-    font-size: 4vw;
+    font-size: 0.9rem;
+}
+
+.jdgm-preview-badge {
+    position: relative;
+    bottom: 2vw;
+    margin: auto;
 }
 
 .recc_buy_button {
     position: relative;
+    bottom: 4vw;
     margin: auto;
 }
 
@@ -485,13 +484,19 @@ body {
 }
 
 .social_links {
-    display: inline-block;
+    position: relative;
+    display: inline-flex;
+    text-align: center;
     margin-top: 2vw;
+    margin-bottom: 5vw;
+}
+
+.img_link {
+    height: 100%;
 }
 
 .social {
-    width: 5%;
-    margin: 5vw;
+    width: 10%;
 }
 
 @keyframes fader {
@@ -583,7 +588,7 @@ body {
     .product_info {
         border-radius: 0 0 2rem 2rem;
         margin-top: 3.4375rem;
-        height: 100vh;
+        height: 45rem;
         display: inline-flex;
         text-align: start;
     }
@@ -670,6 +675,7 @@ body {
     .desk_inner_container {
         position: relative;
         display: inline-flex;
+        scroll-margin-top: 5rem;
     }
 
     .desk_left_wrapper {
@@ -821,12 +827,14 @@ body {
         color: #451E5D;
         margin-top: 2rem;
         font-size: 2.5rem;
+        scroll-margin-top: 5rem;
     }
 
     .recommended_carousel {
         position: relative;
         margin-top: 2rem;
         height: auto;
+        text-align: center;
         overflow-x: scroll;
         scrollbar-width: none;
     }
@@ -834,7 +842,7 @@ body {
     .recommended_card_container {
         position: relative;
         display: inline-flex;
-        width: 100%;
+        width: auto;
     }
 
     .recommended_card_wrapper {
@@ -879,14 +887,22 @@ body {
         pointer-events: auto;
     }
 
-    .recommended_img:hover {
-        transform: scale(1.03);
-    }
-
     .recommended_title {
         padding: 0.25rem;
         color: #451E5D;
         font-size: 0.9rem;
+    }
+
+    .jdgm-preview-badge {
+        position: relative;
+        bottom: 0.5rem;
+        margin: auto;
+    }
+
+    .recc_buy_button {
+        position: relative;
+        bottom: 1rem;
+        margin: auto;
     }
 
     .dots_wrapper { display: none; }
@@ -952,18 +968,24 @@ body {
 
     .bottom_logo {
         position: relative;
-        width: 40%;
+        width: 20%;
         margin-top: 2rem;
     }
 
     .policies {
         display: inline-flex;
-        margin-left: 8%;
-        margin-right: 8%;
+        margin-left: 7%;
+        margin-right: 7%;
         margin-top: 1rem;
     }
 
     .social_links { margin-top: 0; }
+
+    .img_link {
+        margin: 0;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
 
     .social {
         width: 1.5rem;
@@ -1102,7 +1124,7 @@ body {
     }
 
     .loop_dots_wrapper {
-        bottom: 8.25rem;
+        bottom: 4rem;
     }
 
     /*-- Review Section (TODO) --*/
@@ -1141,6 +1163,10 @@ body {
 
     .recommended_card_container {
         width: auto;
+    }
+
+    .recommended_img:hover {
+        transform: scale(1.03);
     }
 
     .dots_wrapper { display: none; }
@@ -1223,7 +1249,7 @@ body {
 
     .bottom_logo {
         position: relative;
-        width: 25%;
+        width: 15%;
         height: fit-content;
         margin-top: 2rem;
     }
@@ -1234,6 +1260,14 @@ body {
         margin-left: 2rem;
         margin-right: 2rem;
     }
+
+    .policies {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2rem;
+    }
+
+    .social_links { margin-bottom: 1.5rem; }
 
     .social {
         transition: 0.2s;

@@ -101,7 +101,7 @@ body {
     position: relative;
     text-align: center;
     width: 80%;
-    height: 110vw;
+    height: fit-content;
     margin: auto;
     background-color: white;
     border: 2px solid black;
@@ -146,9 +146,18 @@ body {
     font-size: 0.9rem;
 }
 
+.jdgm-preview-badge {
+    position: relative;
+    bottom: 1vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+}
+
 .buy_button {
     position: relative;
     margin: auto;
+    bottom: 3vw;
+    margin-bottom: 2vw;
 }
 
 .dots_wrapper {
@@ -275,7 +284,7 @@ body {
     background-color: white;
     border: 2px solid black;
     border-radius: 5vw;
-    height: 100vw;
+    height: fit-content;
     margin-top: 5vw;
     margin-left: 7vw;
     margin-right: 7vw;
@@ -319,8 +328,9 @@ body {
 
 .buy_button-bundle {
     position: relative;
+    bottom: 2vw;
     margin: auto;
-    bottom: 1vw;
+    margin-bottom: 2vw;
 }
 
 .desktop_bundle_container {
@@ -428,13 +438,19 @@ body {
 }
 
 .social_links {
-    display: inline-block;
+    position: relative;
+    display: inline-flex;
+    text-align: center;
     margin-top: 2vw;
+    margin-bottom: 5vw;
+}
+
+.img_link {
+    height: 100%;
 }
 
 .social {
-    width: 5%;
-    margin: 5vw;
+    width: 10%;
 }
 
 @keyframes fader {
@@ -554,11 +570,13 @@ body {
 
     .carousel_container {
         bottom: 8rem;
+        text-align: center;
         overflow-x: scroll;
         scrollbar-width: none;
     }
 
     .product_card_carousel {
+        width: auto;
         margin-left: 0;
         margin-right: 0;
     }
@@ -604,6 +622,14 @@ body {
     .product_title {
         padding: 0.25rem;
         color: #451E5D;
+    }
+
+    .jdgm-preview-badge {
+        margin: 0.5rem;
+    }
+
+    .buy_button {
+        bottom: 1.5rem;
     }
 
     .dots_wrapper { display: none; }
@@ -706,8 +732,8 @@ body {
         width: 60%;
         height: 100%;
         color: #451E5D;
-        margin-left: 1rem;
-        margin-top: 1rem;
+        margin-left: 2rem;
+        margin-top: 2.5rem;
         font-family: Rasa;
         font-size: larger;
         font-weight: bold;
@@ -765,7 +791,7 @@ body {
     .desk_buy_button-bundle {
         position: relative;
         margin: auto;
-        bottom: 1rem;
+        bottom: 1.5rem;
     }
 
     /*-- Review Section (TODO) --*/
@@ -842,7 +868,7 @@ body {
 
     .bottom_logo {
         position: relative;
-        width: 40%;
+        width: 20%;
         margin-top: 2rem;
     }
 
@@ -854,6 +880,12 @@ body {
     }
 
     .social_links { margin-top: 0; }
+
+    .img_link {
+        margin: 0;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
 
     .social {
         width: 1.5rem;
@@ -913,7 +945,6 @@ body {
     }
 
     .product_card_wrapper {
-        border: none;
         display: block;
     }
 
@@ -1067,7 +1098,7 @@ body {
     .desk_buy_button-bundle {
         position: relative;
         margin: auto;
-        bottom: 1rem;
+        bottom: 2rem;
     }
 
     /*-- Review Section --*/
@@ -1162,7 +1193,7 @@ body {
 
     .bottom_logo {
         position: relative;
-        width: 25%;
+        width: 15%;
         height: fit-content;
         margin-top: 2rem;
     }
@@ -1173,6 +1204,14 @@ body {
         margin-left: 2rem;
         margin-right: 2rem;
     }
+
+    .policies {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2rem;
+    }
+
+    .social_links { margin-bottom: 1.5rem; }
 
     .social {
         transition: 0.2s;

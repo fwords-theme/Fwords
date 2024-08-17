@@ -7,6 +7,12 @@ function scrollToProducts() {
     nextDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+// Store product ID and send it to product page
+function sendId(n) {
+    const productID = parseInt(n);
+    localStorage.setItem("product_id", productID);
+}
+
 // Gesture scroll through the container
 onload = function() {
     let slideIndex = 1;
@@ -16,10 +22,6 @@ onload = function() {
 
     function plusSlides(n) {
         showSlides(slideIndex += n);
-    }
-        
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
     }
         
     function showSlides(n) {
@@ -85,7 +87,6 @@ onload = function() {
             const buyButton = buyButtons[slideIndex - 1];
             if (buyButton && !buyButton.hasAttribute('data-initialized')) {
                 buyButton.setAttribute('data-initialized', 'true');
-
                 const scriptSrc = `js/item${slideIndex}_shopify.js`;
                 const newScript = document.createElement('script');
                 newScript.src = scriptSrc;
