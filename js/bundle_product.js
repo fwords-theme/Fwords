@@ -44,7 +44,7 @@ onload = function() {
         else {
             let i;
             let slides = document.getElementsByClassName("recommended_card_wrapper");
-            for (i = 0; i < slides.length; i++) {
+            for (i = 0; i < slides.length; i += 1) {
                 slides[i].style.display = "block";
                 loadBuyButtonScript(i);
             }
@@ -82,7 +82,7 @@ onload = function() {
     slideshowContainer.addEventListener('touchend', handleTouchEnd, { passive: true });
 
     function loadBuyButtonScript(slideIndex) {
-        const buyButtons = document.getElementsByClassName('buy_button');
+        const buyButtons = document.getElementsByClassName('recc_buy_button');
         if (slideIndex <= buyButtons.length) {
             const buyButton = buyButtons[slideIndex - 1];
             if (buyButton && !buyButton.hasAttribute('data-initialized')) {
@@ -181,4 +181,9 @@ function readMore() {
         btnText.innerHTML = "read less";
         moreDescription.style.display = "block";
     }
+}
+
+function sendId(n) {
+    const productID = parseInt(n);
+    localStorage.setItem("product_id", productID);
 }
