@@ -571,6 +571,7 @@ body {
     .carousel_container {
         bottom: 8rem;
         text-align: center;
+        overflow-y: hidden;
         overflow-x: scroll;
         scrollbar-width: none;
     }
