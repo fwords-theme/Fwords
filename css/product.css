@@ -37,13 +37,11 @@ body {
 
 .product_container {
     width: 100%;
-    height: auto;
 }
 
 #product {
     position: relative;
     width: 50%;
-    height: fit-content;
     user-select: none;
     margin-top: 15vw;
 }
@@ -279,12 +277,31 @@ body {
     position: relative;
     text-align: center;
     font-size: 7.5vw;
-    margin-top: 5vw;
     color: #451E5D;
 }
 
-.reviews {
-    text-align: center;
+.review_wrapper {
+    position: relative;
+}
+
+.review_card {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5vw;
+    width: 90%;
+    margin: auto;
+    margin-top: 5vw;
+}
+
+.jdgm-review-widget {
+    position: relative;
+    color: #451E5D;
+}
+
+.jdgm-outside-widget {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*-- Recommended Product Carousel Section --*/
@@ -815,10 +832,12 @@ body {
         font-size: 2.25rem;
         color: #451E5D;
         bottom: 2rem;
+        margin-top: 2rem;
     }
-    
-    .reviews {
-        text-align: center;
+
+    .review_card {
+        border-radius: 2rem;
+        margin-top: 0;
     }
 
     /*-- Recommended Product Carousel Section --*/
@@ -1134,13 +1153,6 @@ body {
         text-align: center;
         font-size: 2.25rem;
         color: #451E5D;
-        bottom: 6rem;
-    }
-    
-    .reviews {
-        position: relative;
-        text-align: center;
-        bottom: 6rem;
     }
 
     /*-- Recommended Product Carousel Section --*/
@@ -1150,13 +1162,11 @@ body {
         color: #451E5D;
         margin-top: 2rem;
         font-size: 2.5rem;
-        bottom: 6rem;
     }
 
     .recommended_carousel {
         position: relative;
         margin-top: 2rem;
-        bottom: 6rem;
         overflow-x: scroll;
         scrollbar-width: none;
         text-align: center;
@@ -1176,7 +1186,7 @@ body {
     .desktop_present_guide {
         position: relative;
         display: inline-flex;
-        bottom: 2rem;
+        margin-top: 5rem;
     }
 
     .desk_present_img {
