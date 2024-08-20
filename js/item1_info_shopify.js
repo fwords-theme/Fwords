@@ -55,7 +55,7 @@
         "background-color": "white",
         "border": "2px solid white",
         ":focus": {
-          "display": "none",
+          "background-color": "#75339e"
         },
         "border-radius": "15px",
         "padding-left": "28px",

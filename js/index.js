@@ -13,7 +13,7 @@ function sendId(n) {
     localStorage.setItem("product_id", productID);
 }
 
-// Gesture scroll through the container
+// Gesture scroll through the containers
 onload = function() {
     let slideIndex = 1;
     let touchStartX = 0;
@@ -97,4 +97,68 @@ onload = function() {
             }
         }
     }
+
+    //Gesture scroll for the review section
+    let reviewSlideIndex = 1;
+    let reviewTouchStartX = 0;
+    let reviewTouchEndX = 0;
+    showReviewSlides(reviewSlideIndex);
+
+    function plusReviewSlides(n) {
+        showReviewSlides(reviewSlideIndex += n);
+    }
+        
+    function showReviewSlides(n) {
+        if (window.innerWidth < 768) {
+            let j;
+            let reviewSlides = document.getElementsByClassName("review_card_wrapper");
+            let reviewDots = document.getElementsByClassName("review_dots");
+            if (n > reviewSlides.length) { reviewSlideIndex = 1 }
+            if (n < 1) { reviewSlideIndex = reviewSlides.length }
+            for (j = 0; j < reviewSlides.length; j++) {
+                reviewSlides[j].style.display = "none";
+            }
+            for (j = 0; j < reviewDots.length; j++) {
+                reviewDots[j].className = reviewDots[j].className.replace(" review_active", "");
+            }
+            reviewSlides[reviewSlideIndex - 1].style.display = "block";
+            reviewDots[reviewSlideIndex - 1].className += " review_active";
+        }
+        else {
+            let j;
+            let reviewSlides = document.getElementsByClassName("review_card_wrapper");
+            for (j = 0; j < reviewSlides.length; j++) {
+                reviewSlides[j].style.display = "block";
+            }
+        }
+    }
+        
+    function handleReviewTouchStart(event) {
+        reviewTouchStartX = event.touches[0].clientX;
+    }
+        
+    function handleReviewTouchMove(event) {
+        reviewTouchEndX = event.touches[0].clientX;
+    }
+        
+    function handleReviewTouchEnd() {
+        if (reviewTouchStartX && reviewTouchEndX) {
+            let reviewSwipeDistance = reviewTouchStartX - reviewTouchEndX;
+            if (Math.abs(reviewSwipeDistance) > 100) {
+                if (reviewSwipeDistance > 0) {
+                    plusReviewSlides(1);
+                } else {
+                    plusReviewSlides(-1);
+                }
+            }
+        }
+        reviewSwipeDistance = 0;
+        reviewTouchStartX = 0;
+        reviewTouchEndX = 0;
+    }
+
+    const reviewContainer = document.querySelector('.review_card_carousel');
+    reviewContainer.addEventListener('touchstart', handleReviewTouchStart, { passive: true });
+    reviewContainer.addEventListener('touchmove', handleReviewTouchMove, { passive: true });
+    reviewContainer.addEventListener('touchend', handleReviewTouchEnd, { passive: true });
 }

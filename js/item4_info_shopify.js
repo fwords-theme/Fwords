@@ -25,7 +25,7 @@
       ShopifyBuy.UI.onReady(client).then(function (ui) {
         ui.createComponent('product', {
           id: '9561411092773',
-          node: document.getElementById('product-component-1723268139429'),
+          node: document.getElementById('info-product-component-1723268139429'),
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
     "product": {
@@ -55,7 +55,7 @@
           "background-color": "white",
           "border": "2px solid white",
           ":focus": {
-            "display": "none",
+            "background-color": "#75339e"
           },
           "border-radius": "15px",
           "padding-left": "28px",

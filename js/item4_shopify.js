@@ -25,7 +25,7 @@
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('product', {
         id: '9561411092773',
-        node: document.getElementById('product-component-1723268139429'),
+        node: document.getElementById('product-component-1724121810286'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
   "product": {
@@ -54,7 +54,7 @@
         "background-color": "#451e5d",
         "border": "2px solid #451e5d",
         ":focus": {
-          "display": "none",
+          "background-color": "#75339e",
         },
         "border-radius": "30px",
         "padding-left": "78px",
@@ -124,9 +124,9 @@
         ":focus": {
           "background-color": "#75339e"
         },
-        "border-radius": "13px",
-        "padding-left": "65px",
-        "padding-right": "65px"
+        "border-radius": "18px",
+        "padding-left": "80px",
+        "padding-right": "80px"
       },
       "quantityInput": {
         "font-size": "16px",
@@ -159,8 +159,7 @@
       }
     },
     "googleFonts": [
-      "Playfair Display",
-      "Abril Fatface"
+      "Playfair Display"
     ],
     "text": {
       "button": "Add to cart"
@@ -181,7 +180,7 @@
         ":focus": {
           "background-color": "#75339e"
         },
-        "border-radius": "13px"
+        "border-radius": "18px"
       },
       "title": {
         "color": "#451e5d"

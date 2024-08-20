@@ -149,7 +149,7 @@ body {
 .jdgm-preview-badge {
     position: relative;
     bottom: 1vw;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Roboto-Regular;
     color: black;
 }
 
@@ -175,7 +175,6 @@ body {
     background-color: white;
     border: 2px solid #451E5D;
     border-radius: 50%;
-    cursor: pointer;
 }
 
 .active {
@@ -346,8 +345,83 @@ body {
     color: #451E5D;
 }
 
-.reviews {
+.review_container {
+    position: relative;
+    margin-top: 5vw;
+    height: auto;
+}
+
+.review_card_carousel {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+}
+
+.review_card_wrapper {
+    position: relative;
+    width: inherit;
+    display: none;
+    animation-name: slide;
+    animation-duration: 1s;
+}
+
+.review_card {
+    position: relative;
     text-align: center;
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5vw;
+}
+
+.review_img {
+    width: 55%;
+    margin-top: 11vw;
+    transition: 0.2s;
+    user-select: none;
+}
+
+#review_stars {
+    position: relative;
+    margin-top: 2vw;
+    color: black;
+}
+
+.reviewer {
+    position: relative;
+    font-family: Roboto-Regular;
+    margin-top: 2vw;
+}
+
+.review_title {
+    color: #451E5D;
+}
+
+.review_desc {
+    font-family: Roboto-Regular;
+    font-style: italic;
+}
+
+.review_dots_wrapper {
+    position: relative;
+    text-align: center;
+    margin-top: 4vw;
+}
+
+.review_dots {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 1.5vw;
+    background-color: white;
+    border: 2px solid #451E5D;
+    border-radius: 50%;
+}
+
+.review_active {
+    background-color: #451E5D;
 }
 
 /*-- Present Guide Section --*/
@@ -502,6 +576,11 @@ body {
 @font-face { 
     font-family: 'Inter';
     src: url('../fonts/Inter-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.woff') format('woff');
 }
 
 /* SECTION USED FOR TABLET DISPLAYS */
@@ -803,10 +882,46 @@ body {
         color: #451E5D;
         bottom: 4rem;
     }
-    
-    .reviews {
+
+    .review_container {
+        margin-top: 0;
         text-align: center;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        bottom: 2rem;
     }
+    
+    .review_card_carousel {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .review_card_wrapper {
+        display: block;
+    }
+    
+    .review_card {
+        width: 21rem;
+        height: fit-content;
+        border-radius: 2.5rem;
+        margin-left: 1.5625rem;
+        margin-right: 1.5625rem;
+    }
+    
+    .review_img {
+        width: 55%;
+        margin-top: 2rem;
+        transition: 0.2s;
+        user-select: none;
+    }
+    
+    #review_stars { margin-top: 1rem; }
+    
+    .reviewer { margin-top: 0; }
+    
+    .review_dots_wrapper { display: none; }
 
     /*-- Product Guide Section --*/
     .present_guide {
@@ -1106,16 +1221,35 @@ body {
     .review_text {
         position: relative;
         text-align: center;
-        font-size: 2.75rem;
-        bottom: 6rem;
+        font-size: 2.5rem;
+        bottom: 7rem;
         color: #451E5D;
     }
-    
-    .reviews {
-        position: relative;
-        text-align: center;
-        bottom: 6rem;
+
+    .review_container {
+        margin-top: 0;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        bottom: 5rem;
     }
+    
+    .review_card {
+        width: 21rem;
+        height: fit-content;
+        border-radius: 2.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    
+    .review_img {
+        width: 55%;
+        margin-top: 2rem;
+    }
+    
+    #review_stars { margin-top: 1rem; }
+    
+    .reviewer { margin-top: 0; }
 
     /*-- Present Section --*/
     .desktop_present_guide {

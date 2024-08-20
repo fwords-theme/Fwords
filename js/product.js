@@ -155,16 +155,11 @@ onload = function() {
                 const scriptSrc = `../js/item${recommendedProducts[slideIndex -1]}_shopify.js`;
                 const newScript = document.createElement('script');
                 newScript.src = scriptSrc;
-                newScript.onload = () => {
-                    console.log(`Shopify Buy Button script loaded from ${scriptSrc}`);
-                };
                 document.body.appendChild(newScript);
             }
         }
     }
-
     showSlides(slideIndex);
-    console.log(recommendedProducts);
 }
 
 function sendId(n) {
