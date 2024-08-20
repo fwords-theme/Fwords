@@ -389,6 +389,10 @@ body {
     color: black;
 }
 
+#review_stars .jdgm-prev-badge__text {
+    display: none;
+}
+
 .reviewer {
     position: relative;
     font-family: Roboto-Regular;
