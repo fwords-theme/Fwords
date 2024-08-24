@@ -1359,6 +1359,7 @@ body {
     .close_container {
         border-radius: 2rem;
         padding: 1rem;
+        cursor: pointer;
     }
     
     /* -- Bottom nav Section -- */
