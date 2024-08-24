@@ -1,7 +1,8 @@
 // Verify email for newsletter updates
+const verify = document.getElementById('email_verify');
+const deskVerify = document.getElementById('desk_email_verify');
+
 async function validateEmail() {
-    const verify = document.getElementById('email_verify');
-    const deskVerify = document.getElementById('desk_email_verify');
     let email;
     if (window.innerWidth < 768) { email = document.getElementById('email').value; }
     else { email = document.getElementById('desktop_email').value; }
@@ -27,7 +28,6 @@ async function validateEmail() {
         if (data.Status === 0 && data.Answer && data.Answer.length > 0) {
             console.log('Trying to send subscription to Klaviyo');
             sendSubscription(email);
-            openModal();
             return;
         } else {
             if (window.innerWidth < 768) { verify.innerHTML = 'Invalid email domain'; }
@@ -58,7 +58,11 @@ function sendSubscription(email) {
       };
       
       fetch('https://a.klaviyo.com/client/subscriptions/?company_id=VcqFNC', options)
-        .then(console.log('Subscription made successfully'));
+        .then(openModal())
+        .catch(error => {
+          if (window.innerWidth < 768) { verify.innerHTML = 'There was an error subscribing. Try again later'; }
+          else { deskVerify.innerHTML = 'There was an error subscribing. Try again later'; }
+        });
 }
 
 // Modal open and close functionality after successful subscription
