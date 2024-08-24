@@ -26,7 +26,6 @@ async function validateEmail() {
         const data = await response.json();
 
         if (data.Status === 0 && data.Answer && data.Answer.length > 0) {
-            console.log('Trying to send subscription to Klaviyo');
             sendSubscription(email);
             return;
         } else {
