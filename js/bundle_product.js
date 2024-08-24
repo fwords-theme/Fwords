@@ -7,7 +7,7 @@ onload = function() {
         mainImage.style.width = "25rem";
     }
     else {
-        mainImage.style.width = "40rem";
+        mainImage.style.width = "35rem";
     }
 
     const itemArr = document.getElementsByClassName('item');

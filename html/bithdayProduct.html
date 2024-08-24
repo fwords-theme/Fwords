@@ -186,9 +186,10 @@
         <p class="present_h1">its okay, we got you!</p>
         <p class="present_p">leave your email below and well send you a gift guide for all of your loved ones.</p>
         <div class="email_input">
-            <input id="email" class="email" type="text" placeholder="ENTER EMAIL HERE">
-            <button id="join" class="join">JOIN US</button>
+            <input id="email" class="email" type="email" placeholder="ENTER EMAIL HERE">
+            <button id="join" class="join" onclick="validateEmail()">JOIN US</button>
         </div>
+        <p id="email_verify" style="color: red;"></p>
     </section>
 
     <!--Present guide section used only for desktop-->
@@ -199,9 +200,10 @@
             <p class="desk_present_h2">its okay, we got you!</p>
             <p class="desk_present_p">leave your email below and well send you a gift guide for all of your loved ones.</p>
             <div class="desktop_email_input">
-                <input class="desktop_email" type="text" placeholder="ENTER EMAIL HERE">
-                <button class="desktop_join">JOIN US</button>
+                <input id="desktop_email" class="desktop_email" type="email" placeholder="ENTER EMAIL HERE">
+                <button id="desktop_join" class="desktop_join" onclick="validateEmail()">JOIN US</button>
             </div>
+            <p id="desk_email_verify" style="color: red;"></p>
         </div>
     </section>
 
@@ -220,5 +222,6 @@
         </div>
     </div>
     <script src="../js/product.js"></script>
+    <script src="../js/subscription.js"></script>
 </body>
 </html>

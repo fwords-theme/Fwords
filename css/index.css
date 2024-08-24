@@ -12,7 +12,7 @@ body {
     top: 0px;
     position: fixed;
     text-align: center;
-    z-index: 10;
+    z-index: 5;
 }
 
 .logo {
@@ -406,6 +406,7 @@ body {
 .review_desc {
     font-family: Roboto-Regular;
     font-style: italic;
+    margin: 2vw;
 }
 
 .review_dots_wrapper {
@@ -480,6 +481,45 @@ body {
     cursor: pointer;
 }
 
+/*-- Modal Section --*/
+.modal {
+    position: fixed;
+    z-index: 10;
+    padding-top: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #451E5D;
+    display: none
+}
+
+.modal_content {
+    background-color: #D3AFE9;
+    margin: auto;
+    padding: 5vw;
+    width: 80%;
+    border-radius: 5vw;
+    animation: fade-in .3s;
+}
+
+.check {
+    width: 30%;
+}
+
+.thanks {
+    font-size: 6vw;
+}
+
+.close_container {
+    background-color: #451E5D;
+    color: white;
+    border-radius: 3vw;
+    padding: 3vw;
+}
+
 /*-- Bottom Navigation Bar Section --*/
 .bottomnav {
     position: absolute;
@@ -550,6 +590,11 @@ body {
 }
 
 @keyframes slide {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fade-in {
     from {opacity: 0;}
     to {opacity: 1;}
 }
@@ -924,6 +969,8 @@ body {
     #review_stars { margin-top: 1rem; }
     
     .reviewer { margin-top: 0; }
+
+    .review_desc { margin: 1.5rem; }
     
     .review_dots_wrapper { display: none; }
 

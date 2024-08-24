@@ -1,18 +1,3 @@
-// Add event listener for shop button click to scroll to products section
-document.getElementById('shopbtn_hero').addEventListener('click', scrollToProducts);
-document.getElementById('shopbtn_nav').addEventListener('click', scrollToProducts);
-
-function scrollToProducts() {
-    const nextDiv = document.getElementById('product_text');
-    nextDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-// Store product ID and send it to product page
-function sendId(n) {
-    const productID = parseInt(n);
-    localStorage.setItem("product_id", productID);
-}
-
 // Gesture scroll through the containers
 onload = function() {
     let slideIndex = 1;
@@ -161,4 +146,19 @@ onload = function() {
     reviewContainer.addEventListener('touchstart', handleReviewTouchStart, { passive: true });
     reviewContainer.addEventListener('touchmove', handleReviewTouchMove, { passive: true });
     reviewContainer.addEventListener('touchend', handleReviewTouchEnd, { passive: true });
+}
+
+// Add event listener for shop button click to scroll to products section
+document.getElementById('shopbtn_hero').addEventListener('click', scrollToProducts);
+document.getElementById('shopbtn_nav').addEventListener('click', scrollToProducts);
+
+function scrollToProducts() {
+    const nextDiv = document.getElementById('product_text');
+    nextDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Store product ID and send it to product page
+function sendId(n) {
+    const productID = parseInt(n);
+    localStorage.setItem("product_id", productID);
 }
