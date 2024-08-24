@@ -52,7 +52,7 @@ function sendSubscription(email) {
             attributes: {
               profile: {data: {type: 'profile', attributes: {email: `${email}`}}}
             },
-            relationships: {list: {data: {type: 'list', id: 'SaTakW'}}}
+            relationships: {list: {data: {type: 'list', id: 'XrhuGb'}}}
           }
         })
       };

@@ -384,7 +384,7 @@ body {
 .jdgm-preview-badge {
     position: relative;
     bottom: 2vw;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Roboto-Regular;
     margin: auto;
 }
 
@@ -464,6 +464,49 @@ body {
     color: white;
     font-family: Inter;
     cursor: pointer;
+}
+
+/*-- Modal Section --*/
+.modal {
+    position: fixed;
+    z-index: 10;
+    padding-top: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #451E5D;
+    display: none
+}
+
+.modal_content {
+    background-color: #D3AFE9;
+    margin: auto;
+    padding: 5vw;
+    width: 80%;
+    border-radius: 5vw;
+    animation: fade-in .3s;
+}
+
+.check {
+    width: 30%;
+}
+
+.thanks {
+    font-size: 6vw;
+}
+
+.close_container {
+    background-color: #451E5D;
+    color: white;
+    border-radius: 3vw;
+    padding: 3vw;
+}
+
+.close {
+    user-select: none;
 }
 
 /*-- Bottom Navigation Bar Section --*/
@@ -558,6 +601,11 @@ body {
     to {opacity: 1;}
 }
 
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 @font-face { 
     font-family: 'Abril Fatface';
     src: url('../fonts/abrilfatface-regular-webfont.woff') format('woff');
@@ -571,6 +619,11 @@ body {
 @font-face { 
     font-family: 'Rasa';
     src: url('../fonts/R.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.woff') format('woff');
 }
 
 @media screen and (min-width: 768px) {
@@ -978,6 +1031,36 @@ body {
         cursor: pointer;
     }
 
+    /*-- Modal Section --*/
+    .modal {
+        padding-top: 20%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal_content {
+        padding: 2rem;
+        width: 70%;
+        border-radius: 3rem;
+    }
+
+    .check {
+        width: 25%;
+    }
+
+    .thanks {
+        font-size: 2rem;
+    }
+
+    .thanks_desc {
+        font-size: 1.2rem;
+    }
+
+    .close_container {
+        border-radius: 2rem;
+        padding: 1rem;
+    }
+
     /*-- Bottom Navigation Bar Section --*/
     .bottomnav {
         width: 100%;
@@ -1247,6 +1330,36 @@ body {
     }
 
     .present_guide { display: none; }
+
+    /*-- Modal Section --*/
+    .modal {
+        padding-top: 15%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal_content {
+        padding: 2rem;
+        width: 50%;
+        border-radius: 3rem;
+    }
+
+    .check {
+        width: 15%;
+    }
+
+    .thanks {
+        font-size: 2rem;
+    }
+
+    .thanks_desc {
+        font-size: 1.2rem;
+    }
+
+    .close_container {
+        border-radius: 2rem;
+        padding: 1rem;
+    }
     
     .bottomnav {
         position: absolute;
