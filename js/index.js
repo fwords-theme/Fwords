@@ -160,8 +160,7 @@ function sendId(n) {
     localStorage.setItem("product_id", productID);
 }
 
-function sendProductInfo(id, name, amount) {
-    console.log("data layer being sent");
+function temp() {
     gtag('event', 'add_to_cart', {
         currency: 'USD',
         value: amount,
@@ -170,6 +169,6 @@ function sendProductInfo(id, name, amount) {
                 item_id: id,
                 item_name: name
             }
-        ]
-    });
+            ]
+        });
 }
