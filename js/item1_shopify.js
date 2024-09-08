@@ -75,9 +75,9 @@
         "font-family": "Playfair Display, serif"
       }
     },
-    "events": {
-      'afterRender': function(product) {
-        console.log("button was clicked ", product);
+    "DOMEvents": {
+      'click': function(event, target) {
+        console.log("button was clicked ", event, target);
       }
     },
     "contents": {
