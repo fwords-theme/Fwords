@@ -45,8 +45,23 @@
                     <a href="products/loveProduct.html"><img onclick="sendId(1)" class="product_img" src="img/products/I_LOVE_YOU_SO_MUCH_MY_DAAL_LING_CARD.png" alt="" draggable="false"></a>
                     <p class="product_title">i love you so much my daal-ling card</p>
                     <div class="jdgm-widget jdgm-preview-badge" data-id="8646557303077"></div>
-                    <div id='product-component-1724120776527' class="buy_button" onclick="sendProductInfo('8646557303077', 'i love you so much my daal-ling', 7.99)"></div>
+                    <div id='product-component-1724120776527' class="buy_button"></div>
                     <style>@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap');</style>
+                    <script text="type/javascript">
+                        document.getElementById('product-component-1724120776527').addEventListener('click', function() {
+                            gtag("event", "add_to_cart", {
+                                currency: "USD",
+                                value: 7.99,
+                                items: [
+                                    {
+                                        item_id: "8646557303077",
+                                        item_name: "i love you so much my daal-ling",
+                                        price: 7.99
+                                    }
+                                ]
+                            })
+                        })
+                    </script>
                 </div>
             </div>
             <div class="product_card_wrapper">
