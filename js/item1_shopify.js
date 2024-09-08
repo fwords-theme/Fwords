@@ -75,6 +75,11 @@
         "font-family": "Playfair Display, serif"
       }
     },
+    "events": {
+      'afterRender': function(product) {
+        console.log("button was clicked ", product);
+      }
+    },
     "contents": {
       "img": false,
       "title": false,
