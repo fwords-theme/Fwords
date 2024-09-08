@@ -1,11 +1,11 @@
 function sendProductInfo(productId, productName, productPrice) {
     gtag("event", "add_to_cart", {
-        currency: 'USD',
+        currency: "USD",
         value: productPrice,
         items: [
             {
-                id: productId,
-                name: productName,
+                item_id: productId,
+                item_name: productName,
                 price: productPrice,
             }
         ]
