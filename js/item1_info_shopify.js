@@ -76,6 +76,21 @@
         "font-family": "Playfair Display, serif"
       }
     },
+    "DOMEvents": {
+      'click': function(event, target) {
+        gtag("event", "add_to_cart", {
+          currency: "USD",
+          value: 7.99,
+          items: [
+            {
+              item_id: "8646557303077",
+              item_name: "i love you so much my daal-ling",
+              price: 7.99
+            }
+          ]
+        });
+      }
+    },
     "contents": {
       "img": false,
       "title": false,

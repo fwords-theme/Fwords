@@ -77,6 +77,21 @@
           "font-family": "Playfair Display, serif"
         }
       },
+      "DOMEvents": {
+      'click': function(event, target) {
+        gtag("event", "add_to_cart", {
+          currency: "USD",
+          value: 7.99,
+          items: [
+            {
+              item_id: "8646623592741",
+              item_name: "you are naan-stoppable! happy birthday!",
+              price: 7.99
+            }
+          ]
+        });
+      }
+    },
       "contents": {
         "img": false,
         "title": false,
