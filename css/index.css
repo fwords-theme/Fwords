@@ -986,6 +986,7 @@ body {
         height: 100%;
         transition: 0.2s;
         user-select: none;
+        border-radius: 2rem;
     }
     
     #review_stars { margin-top: 1rem; }
@@ -1345,12 +1346,7 @@ body {
         margin-right: 1.5rem;
     }
     
-    .review_img {
-        width: 55%;
-        margin-top: 2rem;
-    }
-    
-    #review_stars { margin-top: 1rem; }
+    #review_stars { margin-top: 1.75rem; }
     
     .reviewer { margin-top: 0; }
 
