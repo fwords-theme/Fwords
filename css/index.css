@@ -376,10 +376,20 @@ body {
     border-radius: 5vw;
 }
 
+.review_img_container {
+    position: relative;
+    margin: auto;
+    width: 70vw;
+    height: 70vw;
+    margin-top: 7vw;
+}
+
 .review_img {
-    width: 55%;
-    margin-top: 11vw;
+    position: relative;
+    width: 100%;
+    height: 100%;
     transition: 0.2s;
+    border-radius: 5vw;
     user-select: none;
 }
 
@@ -407,6 +417,7 @@ body {
     font-family: Roboto-Regular;
     font-style: italic;
     margin: 2vw;
+    margin-bottom: 5vw;
 }
 
 .review_dots_wrapper {
@@ -957,15 +968,22 @@ body {
     
     .review_card {
         width: 21rem;
-        height: fit-content;
+        height: 32rem;
         border-radius: 2.5rem;
         margin-left: 1.5625rem;
         margin-right: 1.5625rem;
     }
+
+    .review_img_container {
+        margin: auto;
+        width: 15rem;
+        height: 15rem;
+        margin-top: 2rem;
+    }
     
     .review_img {
-        width: 55%;
-        margin-top: 2rem;
+        width: 100%;
+        height: 100%;
         transition: 0.2s;
         user-select: none;
     }
