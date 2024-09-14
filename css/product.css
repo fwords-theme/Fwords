@@ -310,6 +310,11 @@ body {
 
 .jdgm-write-rev-link {
     text-transform: lowercase;
+    font-weight: lighter;
+}
+
+.jdgm-rev__title {
+    font-weight: lighter;
 }
 
 .jdgm-rev__body {
@@ -319,6 +324,10 @@ body {
 .jdgm-rev__header {
     border-top: 1px solid black;
     border-spacing: 20vw;
+}
+
+.jdgm-rev-widg__sort-wrapper {
+    display: none;
 }
 
 /*-- Recommended Product Carousel Section --*/
