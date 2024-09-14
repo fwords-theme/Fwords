@@ -77,6 +77,13 @@ body {
     width: 80%;
 }
 
+#info_stars {
+    position: relative;
+    color: white;
+    margin: 4vw;
+    font-family: Rasa;
+}
+
 .product_name {
     font-size: 2vw;
     margin-left: 15vw;
@@ -85,6 +92,7 @@ body {
 }
 
 .buy_button {
+    user-select: none;
     margin: auto;
 }
 
@@ -724,7 +732,6 @@ body {
 
     .product_name {
         font-size: 1rem;
-        margin-top: 5rem;
         margin-left: 0;
         margin-right: 0;
         color: white;
@@ -735,7 +742,13 @@ body {
     }
 
     .product_extra {
+        margin-top: 5rem;
         margin-right: 2rem;
+    }
+
+    #info_stars {
+        margin: 0;
+        top: 1rem;
     }
     
     .product_description {

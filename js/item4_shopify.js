@@ -96,7 +96,7 @@
       "price": false
     },
     "text": {
-      "button": "Add - $21.99"
+      "button": "add - $21.99"
     },
     "googleFonts": [
       "Playfair Display",

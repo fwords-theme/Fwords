@@ -97,7 +97,7 @@
         "price": false
       },
       "text": {
-        "button": "Add to cart - $21.99"
+        "button": "add to cart - $21.99"
       },
       "googleFonts": [
         "Playfair Display",
