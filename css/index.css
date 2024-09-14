@@ -396,6 +396,7 @@ body {
 #review_stars {
     position: relative;
     margin-top: 2vw;
+    width: 30%;
     color: black;
 }
 
@@ -989,7 +990,10 @@ body {
         border-radius: 2rem;
     }
     
-    #review_stars { margin-top: 1rem; }
+    #review_stars {
+        margin-top: 0;
+        margin: 1rem;
+    }
     
     .reviewer { margin-top: 0; }
 
@@ -1345,8 +1349,6 @@ body {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
-    
-    #review_stars { margin-top: 1.75rem; }
     
     .reviewer { margin-top: 0; }
 
