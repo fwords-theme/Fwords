@@ -4,21 +4,40 @@ body {
     font-family: Abril Fatface;
 }
 
+.navbar_container {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+/*-- Header Section --*/
+.discount_flag {
+    background-color: #451E5D;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+#discount_text {
+    color: white;
+    font-family: Roboto;
+    font-size: 3.5vw;
+    border-bottom: 1px solid white;
+    padding: 5px;
+}
+
 /*-- Top Navigation Bar Section --*/
 .topnav {
     background-color: #451E5D;
     width: 100%;
-    height: 55px;
-    top: 0px;
-    position: fixed;
+    height: fit-content;
     text-align: center;
-    z-index: 5;
 }
 
 .logo {
     user-select: none;
     height: 35px;
-    padding-top: 10px;
+    margin: 5px;
 }
 
 .shop_topnav {
@@ -97,10 +116,17 @@ body {
     animation-duration: 1s;
 }
 
+.product_link {
+    display: block;
+    width: 80%;
+    margin: auto;
+    text-decoration: none;
+}
+
 .product_card {
     position: relative;
     text-align: center;
-    width: 80%;
+    width: 100%;
     height: fit-content;
     margin: auto;
     background-color: white;
@@ -175,6 +201,8 @@ body {
     background-color: white;
     border: 2px solid #451E5D;
     border-radius: 50%;
+    /* TODO: REMOVE ONCE CODE WORKS */
+    cursor: pointer;
 }
 
 .active {
@@ -436,6 +464,8 @@ body {
     background-color: white;
     border: 2px solid #451E5D;
     border-radius: 50%;
+    /* TODO: TO BE REMOVED*/
+    cursor: pointer;
 }
 
 .review_active {
@@ -653,20 +683,20 @@ body {
 @media screen and (min-width: 768px) {
 
     /*-- Top Navigation Bar Section --*/
-    .topnav {
-        height: 3.75rem;
+    #discount_text {
+        font-size: 1rem;
     }
 
     .logo {
-        height: 60%;
+        height: 35px;
     }
 
     .shop_topnav {
         display: block;
         position: absolute;
-        right: 0.625rem;
-        top: 0.75rem;
-        margin-right: 0.625rem;
+        right: 0;
+        top: 45%;
+        margin-right: 1rem;
         border-radius: 0.3125rem;
         border: none;
         background-color: white;
@@ -729,6 +759,13 @@ body {
 
     .product_card_wrapper {
         display: block;
+    }
+
+    .product_link {
+        display: block;
+        width: 80%;
+        margin: 0;
+        text-decoration: none;
     }
 
     .product_card {

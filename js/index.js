@@ -8,6 +8,10 @@ onload = function() {
     function plusSlides(n) {
         showSlides(slideIndex += n);
     }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
         
     function showSlides(n) {
         if (window.innerWidth < 768) {
@@ -66,6 +70,13 @@ onload = function() {
     slideshowContainer.addEventListener('touchmove', handleTouchMove, { passive: true });
     slideshowContainer.addEventListener('touchend', handleTouchEnd, { passive: true });
 
+    const dots = document.querySelectorAll('.dots');
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide(index + 1);
+        });
+    });
+
     function loadBuyButtonScript(slideIndex) {
         const buyButtons = document.getElementsByClassName('buy_button');
         if (slideIndex <= buyButtons.length) {
@@ -88,6 +99,10 @@ onload = function() {
 
     function plusReviewSlides(n) {
         showReviewSlides(reviewSlideIndex += n);
+    }
+
+    function currentReviewSlide(n) {
+        showReviewSlides(reviewSlideIndex = n);
     }
         
     function showReviewSlides(n) {
@@ -143,6 +158,13 @@ onload = function() {
     reviewContainer.addEventListener('touchstart', handleReviewTouchStart, { passive: true });
     reviewContainer.addEventListener('touchmove', handleReviewTouchMove, { passive: true });
     reviewContainer.addEventListener('touchend', handleReviewTouchEnd, { passive: true });
+
+    const review_dots = document.querySelectorAll('.review_dots');
+    review_dots.forEach((rdot, rindex) => {
+        rdot.addEventListener('click', () => {
+            currentReviewSlide(rindex + 1);
+        });
+    });
 }
 
 // Add event listener for shop button click to scroll to products section
