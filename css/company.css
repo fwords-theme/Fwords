@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+}
+
+body {
+    text-align: start;
+    background-color: #451E5D;
+}
+
+.navbar_container {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+/*-- Top Navigation Bar Section --*/
+.topnav {
+    background-color: #451E5D;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+.logo {
+    user-select: none;
+    height: 35px;
+    margin: 5px;
+}
+
+.shop_topnav {
+    display: none;
+}
+
+/*-- Privacy Policy Section --*/
+.policy {
+    margin-top: 5vw;
+    color: white;
+}
+
+h1 {
+    font-family: Abril Fatface;
+    text-align: center;
+}
+
+h2 {
+    font-family: Inter;
+    font-size: 5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+
+p {
+    text-align: start;
+    font-family: Inter;
+    font-size: 3.5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+li {
+    font-family: Inter;
+    font-size: 3.5vw;
+    padding: 1vw;
+}
+
+.simple-table {
+    width: 95%;
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 16px;
+    line-height: 1.5;
+}
+  
+.simple-table th, .simple-table td {
+    text-align: left;
+    border: 1px solid #ddd;
+}
+  
+.simple-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+  
+.page-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+  
+.page-description {
+    font-size: 16px;
+    color: #555;
+}
+  
+.page-body h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*-- Bottom Navigation Bar Section --*/
+.bottomnav {
+    position: absolute;
+    margin-top: 10vw;
+    display: block;
+    width: 100%;
+    height: fit-content;
+    background-color: #451E5D;
+    text-align: center;
+}
+
+.bottom_logo {
+    position: relative;
+    width: 60%;
+    margin-top: 5vw;
+}
+
+.separator {
+    margin-top: 1rem;
+    border: thin solid white;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.company_links {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.policies {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 2rem;
+    font-family: Abril Fatface;
+}
+
+.social_links {
+    position: relative;
+    display: inline-flex;
+    text-align: center;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+
+.img_link {
+    height: 100%;
+}
+
+.social {
+    width: 10%;
+}
+
+@font-face { 
+    font-family: 'Abril Fatface';
+    src: url('../fonts/abrilfatface-regular-webfont.woff') format('woff');
+}
+
+@font-face { 
+    font-family: 'Inter-Regular';
+    src: url('../fonts/Inter-Bold.woff') format('woff');
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        height: 35px;
+    }
+
+    /*-- Privacy Policy Section --*/
+    .policy {
+        margin-top: 2rem;
+    }   
+
+    h1 {
+        text-align: start;
+        padding-left: 2vw;
+    }
+
+    h2 {
+        font-family: Inter;
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    p {
+        text-align: start;
+        font-family: Inter;
+        font-size: 1rem;
+    }
+
+    li {
+        font-family: Inter;
+        font-size: 1rem;
+        padding: .25rem;
+    }
+
+    .simple-table {
+        width: 95%;
+        margin: auto;
+        border-collapse: collapse;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .simple-table th, .simple-table td {
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+    
+    .simple-table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+    
+    .page-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .page-description {
+        font-size: 16px;
+        color: #555;
+    }
+    
+    .page-body h2 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /*-- Bottom Navigation Bar Section --*/
+    .bottomnav {
+        width: 100%;
+        height: fit-content;
+        background-color: #451E5D;
+        text-align: center;
+    }
+
+    .bottom_logo {
+        position: relative;
+        width: 20%;
+        margin-top: 0;
+    }
+
+    .policies {
+        display: inline-flex;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 1rem;
+        font-family: Abril Fatface;
+    }
+
+    .social_links { margin-top: 0; }
+
+    .img_link {
+        margin: 0;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .social {
+        width: 1.5rem;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* -- Bottom Nav Section -- */
+    .bottomnav {
+        position: absolute;
+        margin-top: 2rem;
+        display: block;
+        width: 100%;
+        height: fit-content;
+        background-color: #451E5D;
+        text-align: center;
+    }
+
+    .bottom_logo {
+        position: relative;
+        width: 15%;
+        height: fit-content;
+        margin-top: 2rem;
+    }
+
+    .separator {
+        margin-top: 2rem;
+        border: 1px solid white;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .policies {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2rem;
+        font-family: Abril Fatface;
+    }
+
+    .social_links { margin-bottom: 1.5rem; }
+
+    .social {
+        transition: 0.2s;
+    }
+
+    .social:hover {
+        transform: scale(1.06);
+    }
+}
