@@ -1,3 +1,101 @@
+// Gesture scroll through the container
+onload = function() {
+    let slideIndex = 1;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const availableProducts = [1, 2, 3];
+    const currentProduct = parseInt(this.localStorage.getItem("product_id"));
+    const recommendedProducts = availableProducts.filter(item => item != currentProduct);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+        
+    function showSlides(n) {
+        if (window.innerWidth < 768) {
+            let i;
+            let slides = document.getElementsByClassName("recommended_card_wrapper");
+            let dots = document.getElementsByClassName("dots");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }        
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            loadBuyButtonScript(slideIndex);
+        }
+        else {
+            let i;
+            let slides = document.getElementsByClassName("recommended_card_wrapper");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "block";
+                loadBuyButtonScript(i);
+            }
+            loadBuyButtonScript(i++);
+        }
+    }
+        
+    function handleTouchStart(event) {
+        touchStartX = event.touches[0].clientX;
+    }
+        
+    function handleTouchMove(event) {
+        touchEndX = event.touches[0].clientX;
+    }
+        
+    function handleTouchEnd() {
+        if (touchStartX && touchEndX) {
+            let swipeDistance = touchStartX - touchEndX;
+            if (Math.abs(swipeDistance) > 100) {
+                if (swipeDistance > 0) {
+                    plusSlides(1);
+                } else {
+                    plusSlides(-1);
+                }
+            }
+        }
+        swipeDistance = 0;
+        touchStartX = 0;
+        touchEndX = 0;
+    }
+
+    const slideshowContainer = document.querySelector('.recommended_card_container');
+    slideshowContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
+    slideshowContainer.addEventListener('touchmove', handleTouchMove, { passive: true });
+    slideshowContainer.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    const dots = document.querySelectorAll('.dots');
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide(index + 1);
+        });
+    });
+
+    function loadBuyButtonScript(slideIndex) {
+        const buyButtons = document.getElementsByClassName('recc_buy_button');
+        if (slideIndex <= buyButtons.length) {
+            const buyButton = buyButtons[slideIndex - 1];
+            if (buyButton && !buyButton.hasAttribute('data-initialized')) {
+                buyButton.setAttribute('data-initialized', 'true');
+                const scriptSrc = `../js/item${recommendedProducts[slideIndex -1]}_shopify.js`;
+                const newScript = document.createElement('script');
+                newScript.src = scriptSrc;
+                document.body.appendChild(newScript);
+            }
+        }
+    }
+    showSlides(slideIndex);
+}
+
 // Change main image from item selector (mobile and desktop)
 function changeMainImage(n) {
     if (window.innerWidth < 768) {
@@ -73,93 +171,6 @@ function onResize() {
         var productContainer = document.getElementsByClassName('product_container');
         productContainer[0].style.marginRight = '4rem';
     }
-}
-
-// Gesture scroll through the container
-onload = function() {
-    let slideIndex = 1;
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    const availableProducts = [1, 2, 3];
-    const currentProduct = parseInt(this.localStorage.getItem("product_id"));
-    const recommendedProducts = availableProducts.filter(item => item != currentProduct);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-        
-    function showSlides(n) {
-        if (window.innerWidth < 768) {
-            let i;
-            let slides = document.getElementsByClassName("recommended_card_wrapper");
-            let dots = document.getElementsByClassName("dots");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }        
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            loadBuyButtonScript(slideIndex);
-        }
-        else {
-            let i;
-            let slides = document.getElementsByClassName("recommended_card_wrapper");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "block";
-                loadBuyButtonScript(i);
-            }
-            loadBuyButtonScript(i++);
-        }
-    }
-        
-    function handleTouchStart(event) {
-        touchStartX = event.touches[0].clientX;
-    }
-        
-    function handleTouchMove(event) {
-        touchEndX = event.touches[0].clientX;
-    }
-        
-    function handleTouchEnd() {
-        if (touchStartX && touchEndX) {
-            let swipeDistance = touchStartX - touchEndX;
-            if (Math.abs(swipeDistance) > 100) {
-                if (swipeDistance > 0) {
-                    plusSlides(1);
-                } else {
-                    plusSlides(-1);
-                }
-            }
-        }
-        swipeDistance = 0;
-        touchStartX = 0;
-        touchEndX = 0;
-    }
-
-    const slideshowContainer = document.querySelector('.recommended_card_container');
-    slideshowContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
-    slideshowContainer.addEventListener('touchmove', handleTouchMove, { passive: true });
-    slideshowContainer.addEventListener('touchend', handleTouchEnd, { passive: true });
-
-    function loadBuyButtonScript(slideIndex) {
-        const buyButtons = document.getElementsByClassName('recc_buy_button');
-        if (slideIndex <= buyButtons.length) {
-            const buyButton = buyButtons[slideIndex - 1];
-            if (buyButton && !buyButton.hasAttribute('data-initialized')) {
-                buyButton.setAttribute('data-initialized', 'true');
-                const scriptSrc = `../js/item${recommendedProducts[slideIndex -1]}_shopify.js`;
-                const newScript = document.createElement('script');
-                newScript.src = scriptSrc;
-                document.body.appendChild(newScript);
-            }
-        }
-    }
-    showSlides(slideIndex);
 }
 
 function sendId(n) {

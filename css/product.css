@@ -4,21 +4,40 @@ body {
     font-family: Abril Fatface;
 }
 
+.navbar_container {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+/*-- Header Section --*/
+.discount_flag {
+    background-color: #451E5D;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+#discount_text {
+    color: white;
+    font-family: Roboto;
+    font-size: 3.5vw;
+    border-bottom: 1px solid white;
+    padding: 5px;
+}
+
 /*-- Top Navigation Bar Section --*/
 .topnav {
     background-color: #451E5D;
     width: 100%;
-    height: 55px;
-    top: 0px;
-    position: fixed;
+    height: fit-content;
     text-align: center;
-    z-index: 10;
 }
 
 .logo {
     user-select: none;
     height: 35px;
-    padding-top: 10px;
+    margin: 5px;
 }
 
 .shop_topnav {
@@ -32,7 +51,6 @@ body {
     text-align: center;
     background-color: #451E5D;
     border-radius: 0 0 5vw 5vw;
-    margin-top: 5vw;
 }
 
 .product_container {
@@ -138,15 +156,22 @@ body {
     margin-top: 5vw;
 }
 
+.bundle_link {
+    display: block;
+    width: 85%;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+}
+
 .bundle_card {
     position: relative;
     text-align: center;
     background-color: white;
     border: 2px solid black;
     border-radius: 5vw;
+    width: 100%;
     height: fit-content;
-    margin-left: 7vw;
-    margin-right: 7vw;
 }
 
 .bundle_span {
@@ -368,10 +393,18 @@ body {
     animation-duration: 1s;
 }
 
+.review_link {
+    display: block;
+    width: 80%;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+}
+
 .recommended_card {
     position: relative;
     text-align: center;
-    width: 80%;
+    width: 100%;
     height: fit-content;
     margin: auto;
     background-color: white;
@@ -442,6 +475,7 @@ body {
     background-color: white;
     border: 2px solid #451E5D;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .active {
@@ -661,22 +695,21 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-
     /*-- Top Navigation Bar Section --*/
-    .topnav {
-        height: 3.75rem;
+    #discount_text {
+        font-size: 1rem;
     }
 
     .logo {
-        height: 60%;
+        height: 35px;
     }
 
     .shop_topnav {
         display: block;
         position: absolute;
-        right: 0.625rem;
-        top: 0.75rem;
-        margin-right: 0.625rem;
+        right: 0;
+        top: 45%;
+        margin-right: 1rem;
         border-radius: 0.3125rem;
         border: none;
         background-color: white;
@@ -692,7 +725,6 @@ body {
     /*-- Product Infomation Section --*/
     .product_info {
         border-radius: 0 0 2rem 2rem;
-        margin-top: 3.4375rem;
         height: fit-content;
         display: inline-flex;
         text-align: start;
@@ -770,6 +802,10 @@ body {
     .bundle_text { display: none; }
     
     .bundle_wrapper { display: none; }
+
+    .bundle_link {
+        width: 100%;
+    }
 
     .desktop_bundle_container {
         position: relative;
@@ -1140,7 +1176,6 @@ body {
     /*-- Product Infomation Section --*/
     .product_info {
         border-radius: 0 0 2rem 2rem;
-        margin-top: 3.4375rem;
         display: inline-flex;
         text-align: start;
     }

@@ -93,7 +93,7 @@ body {
     font-size: 7.5vw;
     bottom: 25vw;
     color: #451E5D;
-    scroll-margin-top: 16vw;
+    scroll-margin-top: 20vw;
 }
 
 .carousel_container {
@@ -201,8 +201,6 @@ body {
     background-color: white;
     border: 2px solid #451E5D;
     border-radius: 50%;
-    /* TODO: REMOVE ONCE CODE WORKS */
-    cursor: pointer;
 }
 
 .active {
@@ -303,6 +301,14 @@ body {
     text-align: center;
     font-size: 7.5vw;
     color: #451E5D;
+    bottom: 2vw;
+}
+
+#bundle_link {
+    display: block;
+    width: 85%;
+    margin: auto;
+    text-decoration: none;
 }
 
 .bundle_card {
@@ -311,10 +317,8 @@ body {
     background-color: white;
     border: 2px solid black;
     border-radius: 5vw;
+    width: 100%;
     height: fit-content;
-    margin-top: 5vw;
-    margin-left: 7vw;
-    margin-right: 7vw;
 }
 
 .bundle_span {
@@ -740,7 +744,7 @@ body {
         position: relative;
         bottom: 10rem;
         font-size: 2.25rem;
-        scroll-margin-top: 4.375rem;
+        scroll-margin-top: 5.5rem;
     }
 
     .carousel_container {
@@ -1195,7 +1199,7 @@ body {
     .product_text {
         bottom: 100px;
         font-size: 40px;
-        scroll-margin-top: 70px;
+        scroll-margin-top: 80px;
     }
 
     .carousel_container {

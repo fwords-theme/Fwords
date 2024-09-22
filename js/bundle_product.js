@@ -23,6 +23,10 @@ onload = function() {
     function plusSlides(n) {
         showSlides(slideIndex += n);
     }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
         
     function showSlides(n) {
         if (window.innerWidth < 768) {
@@ -80,6 +84,13 @@ onload = function() {
     slideshowContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
     slideshowContainer.addEventListener('touchmove', handleTouchMove, { passive: true });
     slideshowContainer.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    const dots = document.querySelectorAll('.dots');
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide(index + 1);
+        });
+    });
 
     function loadBuyButtonScript(slideIndex) {
         const buyButtons = document.getElementsByClassName('recc_buy_button');
